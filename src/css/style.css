@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #503AB5;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos del menú */
+header {
+    background-color: #FFFFFF;
+    height: 60px;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Centra verticalmente el contenido del header */
+}
+header img {
+    /* Logotipo */
+    width: 100px;
+    /* Ajusta el valor según tus necesidades */
+    height: auto;
+    /* Mantiene la proporción original */
+    margin-left: 25px;
+    object-fit: contain;
+    /* Ajusta según sea necesario, dependiendo de cómo quieras que se muestre la imagen */
+}
+header nav ul {
+    display: flex;
+    gap: 5rem;
+}
+ul {
+    list-style: none; /* Elimina los estilos de viñetas predeterminados */
+    padding: 0;
+    margin: 0;
+}
+li {
+    display: inline-block; /* Hace que los elementos de la lista sean en línea y no en bloque */
+    margin-right: 15px; /* Espacio entre los elementos de la lista */
+}
+a {
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    color: #302E29; /* Color del texto del enlace */
+    font-weight: 400; /* Peso de la fuente */
+}
+a:hover {
+    color: #ff6600; /* Cambia el color del texto del enlace al pasar el ratón sobre él */
+}
+
+/* Estilos del contenido */
+.padding {
+    padding: 55px;
+}
+
+/* Carrusel de imágenes */
+.banner {
+    background-size: cover;
+    height: 500px;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden; /* Evita que la imagen sobresalga del contenedor si es más grande */
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(48, 46, 41, 0.4); /* Color de fondo con transparencia */
+}
+.banner img {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 100%; /* Ocupa el 100% de la altura del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen y cubre todo el contenedor */
+}
+.custom-div { /* texto */
+    display: flex;
+    position: absolute;
+    bottom: 0; /* Coloca el elemento en la parte inferior del contenedor principal */
+    left: 25px; /* Coloca el elemento a la izquierda del contenedor principal */
+}
+
+/* Frase */
+.quote {
+    background-color: #FFC564;
+    text-align: center;
+    /* Centra el contenido horizontalmente */
+    overflow: hidden;
+}
+.quote img {
+    max-width: 100%;
+    /* Hace que la imagen no sea más grande que su tamaño original */
+    display: block;
+    /* Elimina el espacio adicional debajo de la imagen */
+    padding: 30px;
+    margin: 0 auto;
+    /* Centra la imagen horizontalmente */
+}
+
+/* Ubicación y horarios */
+.ubication {
+    display: flex;
+}
+
+/* FAQ */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(209, 212, 216);
+    gap: 1rem;
+    padding-bottom: 25px;
+}
+
+/* Aviso de Privacidad */
+.invoicing {
+    background-color: rgba(209, 212, 216, 0.2);
+    height: 400px;
+}
+footer {
+    background-color: rgba(255, 103, 29, 0.8);
+}
+footer .privacy {
+    background-color: #504D48;
+    color: #FFFFFF;
+}
+footer img {
+    height: 100px;
+}
+.social-media {
+    height: 30px;
+}
