@@ -86,23 +86,30 @@ a:hover {
 }
 
 .btn {
-    width: 30px; /* Ajusta el ancho del botón */
+    width: 30px;
+    /* Ajusta el ancho del botón */
     height: 30px;
     color: #FFFFFF;
-    background-color: #ff6600; /* Color de fondo del botón */
-    border-radius: 50%; /* Hace que el botón tenga forma de círculo */
+    background-color: #ff6600;
+    /* Color de fondo del botón */
+    border-radius: 50%;
+    /* Hace que el botón tenga forma de círculo */
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
 }
 
 .btn i {
-    font-size: 1rem; /* Ajusta el tamaño del ícono según tus necesidades */
+    font-size: 1rem;
+    /* Ajusta el tamaño del ícono según tus necesidades */
 }
 
 form.form-search {
     display: flex;
-    width: 14rem; /* Cambia el valor del ancho según tus necesidades */
+    width: 14rem;
+    /* Cambia el valor del ancho según tus necesidades */
     gap: 5px;
     justify-content: center;
     align-items: center;
@@ -111,13 +118,16 @@ form.form-search {
 form input[type="search"] {
     padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 20px; /* Redondea el borde */
-    outline: none; /* Elimina el contorno al enfocar */
+    border-radius: 20px;
+    /* Redondea el borde */
+    outline: none;
+    /* Elimina el contorno al enfocar */
     font-size: 1rem;
 }
 
 form input[type="search"]:focus {
-    border-color: #FFA400; /* Cambia el color del borde al enfocar */
+    border-color: #FFA400;
+    /* Cambia el color del borde al enfocar */
 }
 
 /* Estilos del contenido */
@@ -137,9 +147,10 @@ form input[type="search"]:focus {
     padding: 0;
     position: relative;
     /* Posiciona la imagen para superponer el texto */
-    overflow: hidden; /* Evita que el contenido sobresalga del área del padding */
+    overflow: hidden;
+    /* Evita que el contenido sobresalga del área del padding */
     box-sizing: border-box;
-    align-items: center; 
+    align-items: center;
 }
 
 .text {
@@ -151,8 +162,10 @@ form input[type="search"]:focus {
     /* Limita el ancho máximo del contenedor de texto para evitar que sea demasiado ancho */
     position: absolute;
     /* Posiciona el texto encima de la imagen */
-    display: flex; /* Activa el modelo de caja flexible */
-    justify-content: center; /* Centra horizontalmente */
+    display: flex;
+    /* Activa el modelo de caja flexible */
+    justify-content: center;
+    /* Centra horizontalmente */
     flex-direction: column;
 }
 
@@ -254,7 +267,8 @@ p {
     flex: 1;
     max-width: 65%;
     flex-direction: column;
-    padding: 50px; /* Ajusta el padding según sea necesario */
+    padding: 50px;
+    /* Ajusta el padding según sea necesario */
 }
 
 .days {
@@ -278,7 +292,8 @@ p {
     padding: 0;
     position: relative;
     /* Posiciona la imagen para superponer el texto */
-    overflow: hidden; /* Evita que el contenido sobresalga del área del padding */
+    overflow: hidden;
+    /* Evita que el contenido sobresalga del área del padding */
     box-sizing: border-box;
     align-items: center;
 }
@@ -293,11 +308,13 @@ p {
     padding: 100px;
     position: relative;
     /* Posiciona la imagen para superponer el texto */
-    overflow: hidden; /* Evita que el contenido sobresalga del área del padding */
+    overflow: hidden;
+    /* Evita que el contenido sobresalga del área del padding */
     box-sizing: border-box;
-    align-items: center; 
+    align-items: center;
 }
-.text-invoicing{
+
+.text-invoicing {
     flex: 1;
     /* Hace que el contenedor de texto ocupe todo el espacio disponible */
     padding: 0;
@@ -305,10 +322,13 @@ p {
     max-width: 50%;
     /* Limita el ancho máximo del contenedor de texto para evitar que sea demasiado ancho */
     position: absolute;
-    display: flex; /* Activa el modelo de caja flexible */
-    justify-content: center; /* Centra horizontalmente */
+    display: flex;
+    /* Activa el modelo de caja flexible */
+    justify-content: center;
+    /* Centra horizontalmente */
     flex-direction: column;
 }
+
 .form-invoicing {
     flex: 1;
     /* Hace que el contenedor de imagen ocupe todo el espacio disponible */
@@ -320,9 +340,12 @@ p {
     border-radius: 15px;
     padding: 20px;
     font-size: .9rem;
-    display: flex; /* Activa el modelo de caja flexible */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    display: flex;
+    /* Activa el modelo de caja flexible */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
 }
 
 form {
@@ -349,19 +372,26 @@ form {
 input[type="submit"] {
     outline: none;
     border: none;
-    border-radius: 25px; /* Redondea las esquinas */
-    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
-    background-color: #FFA400; /* Color de fondo normal */
-    color: white; /* Color de texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 25px;
+    /* Redondea las esquinas */
+    padding: 10px 20px;
+    /* Ajusta el relleno según tus necesidades */
+    background-color: #FFA400;
+    /* Color de fondo normal */
+    color: white;
+    /* Color de texto */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
 }
 
 input[type="submit"]:hover {
-    background-color: #ff6600; /* Cambia el color de fondo al pasar sobre el botón */
+    background-color: #ff6600;
+    /* Cambia el color de fondo al pasar sobre el botón */
 }
 
 input[type="submit"]:active {
-    background-color: #ff6600; /* Cambia el color de fondo al hacer clic en el botón */
+    background-color: #ff6600;
+    /* Cambia el color de fondo al hacer clic en el botón */
 }
 
 /* FAQ */
@@ -424,4 +454,140 @@ footer img {
 
 .div-social-media {
     padding: 4%;
+}
+
+
+
+
+/* Estilos para pantallas más pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+
+    /* Aquí van los estilos específicos para pantallas con un ancho máximo de 600px */
+    header {
+        height: 80px;
+        /* Ajusta la altura del encabezado */
+    }
+
+    header img {
+        width: 80px;
+        /* Ajusta el tamaño del logotipo para pantallas pequeñas */
+        margin-left: 10px;
+        /* Ajusta el margen izquierdo del logotipo */
+    }
+
+    header nav ul {
+        gap: 3rem;
+        /* Reduce el espacio entre elementos del menú */
+    }
+
+    
+
+    .padding,
+    .padding-grey,
+    .padding-green,
+    .padding-grey-invoicing {
+        padding: 20px;
+        /* Ajusta el relleno general */
+    }
+
+    .text {
+        padding: 20px;
+        /* Ajusta el relleno del texto */
+        max-width: 100%;
+        /* Ocupa todo el ancho disponible */
+    }
+
+    .image {
+        max-width: 100%;
+        /* Ocupa todo el ancho disponible */
+        margin-left: auto;
+        /* Centra la imagen */
+    }
+
+    .form-invoicing {
+        max-width: 100%;
+        /* Ocupa todo el ancho disponible */
+        margin-left: 0;
+        /* Elimina el margen izquierdo */
+    }
+
+    form.form-search {
+        width: 100%;
+        /* Ocupa todo el ancho disponible */
+    }
+
+    .text-ubication {
+        padding: 20px;
+        /* Ajusta el relleno del texto */
+        max-width: 100%;
+        /* Ocupa todo el ancho disponible */
+    }
+
+    form {
+        width: 100%;
+        /* Ocupa todo el ancho disponible */
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    /* Aquí van los estilos específicos para pantallas con un ancho entre 601px y 1024px */
+    header {
+        height: 100px;
+        /* Ajusta la altura del encabezado */
+    }
+
+    header img {
+        width: 100px;
+        /* Ajusta el tamaño del logotipo para tablets */
+        margin-left: 15px;
+        /* Ajusta el margen izquierdo del logotipo */
+    }
+
+    header nav ul {
+        gap: 4rem;
+        /* Aumenta el espacio entre elementos del menú */
+    }
+
+    .padding,
+    .padding-grey,
+    .padding-green,
+    .padding-grey-invoicing {
+        padding: 30px;
+        /* Ajusta el relleno general */
+    }
+
+    .text {
+        padding: 30px;
+        /* Ajusta el relleno del texto */
+        max-width: 70%;
+        /* Limita el ancho máximo del contenedor de texto */
+    }
+
+    .image {
+        max-width: 50%;
+        /* Limita el ancho máximo del contenedor de imagen */
+        margin-left: auto;
+        /* Centra la imagen */
+    }
+
+    .form-invoicing {
+        max-width: 50%;
+        /* Limita el ancho máximo del contenedor de formulario */
+        margin-left: 50px;
+        /* Alinea el formulario a la derecha */
+    }
+
+    .text-ubication {
+        padding: 30px;
+        /* Ajusta el relleno del texto */
+        max-width: 70%;
+        /* Limita el ancho máximo del contenedor de texto */
+    }
+
+    form {
+        width: 50%;
+        /* Limita el ancho del formulario */
+    }
 }
