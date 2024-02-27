@@ -25,7 +25,7 @@
             <li><a href="../index.html#contact">Contacto</a></li>
             <li><a href="../pages/facturacion.html">Facturación</a></li>
         </ul>
-        <form action="">
+        <form class="form-search" action="">
             <input type="search" placeholder="Buscar" required>
             <div class="btn">
                 <i class="fa-solid fa-magnifying-glass fa-2xs"></i>
@@ -36,31 +36,75 @@
 
 <main>
     <!-- Carrusel de imágenes -->
-    <section class="invoicing padding">
-        <h2>Facturación</h2>
-        <h1>Electrónica</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum magna sed elit pellentesque, ac
-            ullamcorper mauris lacinia. Pellentesque eget turpis magna. Proin condimentum, nisi et varius vehicula,
-            turpis sapien iaculis massa, in interdum odio orci in risus. Sed sagittis nisl nisi, non dapibus metus
-            pellentesque non. In luctus, nibh sed pulvinar pretium, risus nunc congue dolor, quis mattis ante diam non
-            urna. Etiam id gravida eros. Curabitur dapibus mi vel sodales volutpat. Nam efficitur tortor eget mattis
-            mollis. Ut luctus lectus vel dignissim imperdiet. </p>
+    <section class="padding-grey-invoicing">
+        <div class="text-invoicing">
+            <h2>Facturación</h2>
+            <h1>Electrónica</h1>
+            <p>A partir del 01 de septiembre de 2022, nuestro sistema de facturación se actualizó a la nueva versión 4.0
+                de conformidad con las nuevas disposiciones fiscales relacionadas con comprobantes fiscales publicadas
+                por
+                el SAT, por lo tanto, es requerido que nuestros clientes validen que sus datos fiscales que son
+                obligatorios, se capturen conforme a su constancia de situación fiscal.
+            </p>
+            <p>Los datos fiscales obligatorios que serán validados por el SAT,
+                además del RFC son los siguientes:
+                <strong>RAZON SOCIAL SIN INCLUIR RÉGIMEN DE CAPITAL, CÓDIGO POSTAL, RÉGIMEN FISCAL y USO DE FACTURA,
+                    a continuación los campos en los que se deben capturar:</strong>
+            </p>
+            <p> Considerar que si los datos capturados no coinciden con la información señalada en su constancia de
+                situación fiscal actualizada o reciente, el SAT no permitirá emitir el CFDI.
+                Adicionalmente, usted podrá descargar y consultar sus datos fiscales directamente de la página del SAT
+                ingresando con su RFC y contraseña o firma electrónica, en la opción “Genera tu constancia de Situación
+                Fiscal”: <a
+                    href="https://www.sat.gob.mx/aplicacion/53027/genera-tu-constancia-de-situacion-fiscal">Dando click
+                    Aquí</a></p>
+            <p>Cualquier duda o apoyo enviar los datos al correo <a
+                    href="mailto:chuencreando@gmail.com">chuencreando@gmail.com</a></p>
+        </div>
+        <div class="form-invoicing">
+            <form action="" method="post">
+                <label for="nombre"></label>
+                <input class="form" type="text" id="nombre" name="nombre" placeholder="Nombre completo" required><br>
+
+                <label for="razon_social"></label>
+                <input class="form" type="text" id="razon_social" name="razon_social" placeholder="Razón Social" required><br>
+
+                <label for="direccion"></label>
+                <input class="form" type="text" id="direccion" name="direccion" placeholder="Dirección" required><br>
+
+                <label for="codigo_postal"></label>
+                <input class="form" type="text" id="codigo_postal" name="codigo_postal" placeholder="Código Postal" required><br>
+
+                <label for="regimen_fiscal"></label>
+                <input class="form" type="text" id="regimen_fiscal" name="regimen_fiscal" placeholder="Régimen Fiscal" required><br>
+
+                <label for="uso_facturacion"></label>
+                <input class="form" type="text" id="uso_facturacion" name="uso_facturacion" placeholder="Uso de Facturación" required><br>
+
+                <label for="correo_electronico"></label>
+                <input class="form" type="email" id="correo_electronico" name="correo_electronico" placeholder="Correo electrónico"
+                    required><br>
+
+                <input class="form" type="submit" value="Enviar">
+            </form>
+        </div>
     </section>
 </main>
 <footer>
-    <img src="../img/hashtag-chuen.png" alt="logotipo marca">
-    <p>Teniente Fausto Vega, Col. Escuadrón 201</p>
-    <img class="social-media" src="../img/f.png" alt="logotipo facebook">
-    <a href="https://www.facebook.com/ChuenCreando/">ChuenCreando</a>
-    <img class="social-media" src="../img/ig.png" alt="logotipo instagram">
-    <a href="https://www.instagram.com/chuen.creando.sensaciones/">Chuen.Creando.Sensaciones</a>
+    <div class="div-social-media">
+        <img src="../img/hashtag-chuen.png" alt="logotipo marca">
+        <p class="footer-text">CDMX, Teniente Fausto Vega Santander, Col. Escuadrón 201</p>
+        <img class="social-media" src="../img/f.png" alt="logotipo facebook">
+        <a href="https://www.facebook.com/ChuenCreando/">ChuenCreando</a>
+        <img class="social-media" src="../img/ig.png" alt="logotipo instagram">
+        <a href="https://www.instagram.com/chuen.creando.sensaciones/">Chuen.Creando.Sensaciones</a>
+    </div>
     <section class="privacy">
         <p>2024 ® Chuen.com.mx Todos los derechos reservados.
             <br>
             Aviso de Privacidad
         </p>
     </section>
-
 </footer>
 </body>
 

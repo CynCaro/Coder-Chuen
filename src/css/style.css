@@ -4,19 +4,28 @@
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
 }
+
 h1 {
     font-size: 3rem;
     font-weight: 600;
 }
+
 h2 {
     font-size: 2rem;
     font-weight: 300;
 }
+
 h3 {
     font-size: 1.5rem;
     font-weight: 400;
     color: #503AB5;
 }
+
+p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -32,6 +41,7 @@ header {
     align-items: center;
     /* Centra verticalmente el contenido del header */
 }
+
 header img {
     /* Logotipo */
     width: 100px;
@@ -40,33 +50,138 @@ header img {
     /* Mantiene la proporción original */
     margin-left: 25px;
     object-fit: contain;
-    /* Ajusta según sea necesario, dependiendo de cómo quieras que se muestre la imagen */
 }
+
 header nav ul {
     display: flex;
     gap: 5rem;
 }
+
 ul {
-    list-style: none; /* Elimina los estilos de viñetas predeterminados */
+    list-style: none;
+    /* Elimina los estilos de viñetas predeterminados */
     padding: 0;
     margin: 0;
 }
+
 li {
-    display: inline-block; /* Hace que los elementos de la lista sean en línea y no en bloque */
-    margin-right: 15px; /* Espacio entre los elementos de la lista */
+    display: inline-block;
+    /* Hace que los elementos de la lista sean en línea y no en bloque */
+    margin-right: 15px;
+    /* Espacio entre los elementos de la lista */
 }
+
 a {
-    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
-    color: #302E29; /* Color del texto del enlace */
-    font-weight: 400; /* Peso de la fuente */
+    text-decoration: none;
+    /* Elimina el subrayado predeterminado de los enlaces */
+    color: #302E29;
+    /* Color del texto del enlace */
+    font-weight: 400;
+    /* Peso de la fuente */
 }
+
 a:hover {
-    color: #ff6600; /* Cambia el color del texto del enlace al pasar el ratón sobre él */
+    color: #ff6600;
+    /* Cambia el color del texto del enlace al pasar el ratón sobre él */
+}
+
+.btn {
+    width: 30px; /* Ajusta el ancho del botón */
+    height: 30px;
+    color: #FFFFFF;
+    background-color: #ff6600; /* Color de fondo del botón */
+    border-radius: 50%; /* Hace que el botón tenga forma de círculo */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.btn i {
+    font-size: 1rem; /* Ajusta el tamaño del ícono según tus necesidades */
+}
+
+form.form-search {
+    display: flex;
+    width: 14rem; /* Cambia el valor del ancho según tus necesidades */
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+form input[type="search"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Redondea el borde */
+    outline: none; /* Elimina el contorno al enfocar */
+    font-size: 1rem;
+}
+
+form input[type="search"]:focus {
+    border-color: #FFA400; /* Cambia el color del borde al enfocar */
 }
 
 /* Estilos del contenido */
 .padding {
-    padding: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan si no caben en una sola fila */
+    padding: 50px;
+}
+
+.padding-grey {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan si no caben en una sola fila */
+    background-color: rgb(209, 212, 216, 0.3);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* Posiciona la imagen para superponer el texto */
+    overflow: hidden; /* Evita que el contenido sobresalga del área del padding */
+    box-sizing: border-box;
+    align-items: center; 
+}
+
+.text {
+    flex: 1;
+    /* Hace que el contenedor de texto ocupe todo el espacio disponible */
+    padding: 100px;
+    /* Ajusta el espaciado entre el texto y la imagen */
+    max-width: 65%;
+    /* Limita el ancho máximo del contenedor de texto para evitar que sea demasiado ancho */
+    position: absolute;
+    /* Posiciona el texto encima de la imagen */
+    display: flex; /* Activa el modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente */
+    flex-direction: column;
+}
+
+.text p strong {
+    font-weight: 400;
+    /* Aplica negrita al texto dentro del párrafo */
+}
+
+.image {
+    flex: 1;
+    /* Hace que el contenedor de imagen ocupe todo el espacio disponible */
+    max-width: 60%;
+    /* Limita el ancho máximo del contenedor de imagen para evitar que sea demasiado ancho */
+    margin-left: auto;
+    /* Alinea la imagen a la derecha */
+}
+
+.image img {
+    width: 100%;
+    /* Asegura que la imagen ocupe todo el espacio disponible en su contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    display: block;
+    /* Elimina el espacio adicional debajo de la imagen */
+}
+
+p {
+    /* padding-right: 50%; */
+    margin-top: 5%;
 }
 
 /* Carrusel de imágenes */
@@ -75,8 +190,10 @@ a:hover {
     height: 500px;
     max-width: 100%;
     position: relative;
-    overflow: hidden; /* Evita que la imagen sobresalga del contenedor si es más grande */
+    overflow: hidden;
+    /* Evita que la imagen sobresalga del contenedor si es más grande */
 }
+
 .banner::before {
     content: "";
     position: absolute;
@@ -84,18 +201,27 @@ a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(48, 46, 41, 0.4); /* Color de fondo con transparencia */
+    background-color: rgba(48, 46, 41, 0.4);
+    /* Color de fondo con transparencia */
 }
+
 .banner img {
-    width: 100%; /* Ocupa el 100% del ancho del contenedor */
-    height: 100%; /* Ocupa el 100% de la altura del contenedor */
-    object-fit: cover; /* Mantiene la proporción de la imagen y cubre todo el contenedor */
+    width: 100%;
+    /* Ocupa el 100% del ancho del contenedor */
+    height: 100%;
+    /* Ocupa el 100% de la altura del contenedor */
+    object-fit: cover;
+    /* Mantiene la proporción de la imagen y cubre todo el contenedor */
 }
-.custom-div { /* texto */
+
+.custom-div {
+    /* texto */
     display: flex;
     position: absolute;
-    bottom: 0; /* Coloca el elemento en la parte inferior del contenedor principal */
-    left: 25px; /* Coloca el elemento a la izquierda del contenedor principal */
+    bottom: 0;
+    /* Coloca el elemento en la parte inferior del contenedor principal */
+    left: 25px;
+    /* Coloca el elemento a la izquierda del contenedor principal */
 }
 
 /* Frase */
@@ -105,6 +231,7 @@ a:hover {
     /* Centra el contenido horizontalmente */
     overflow: hidden;
 }
+
 .quote img {
     max-width: 100%;
     /* Hace que la imagen no sea más grande que su tamaño original */
@@ -118,6 +245,123 @@ a:hover {
 /* Ubicación y horarios */
 .ubication {
     display: flex;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.text-ubication {
+    flex: 1;
+    max-width: 65%;
+    flex-direction: column;
+    padding: 50px; /* Ajusta el padding según sea necesario */
+}
+
+.days {
+    font-size: 6rem;
+    font-weight: 400;
+    color: #FFC564;
+}
+
+.text-ubication p strong {
+    font-weight: 400;
+    /* Aplica negrita al texto dentro del párrafo */
+}
+
+/* Nosotros */
+.padding-green {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan si no caben en una sola fila */
+    background-color: rgb(72, 181, 166, 0.2);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* Posiciona la imagen para superponer el texto */
+    overflow: hidden; /* Evita que el contenido sobresalga del área del padding */
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* Facturación */
+.padding-grey-invoicing {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan si no caben en una sola fila */
+    background-color: rgb(209, 212, 216, 0.3);
+    margin: 0;
+    padding: 100px;
+    position: relative;
+    /* Posiciona la imagen para superponer el texto */
+    overflow: hidden; /* Evita que el contenido sobresalga del área del padding */
+    box-sizing: border-box;
+    align-items: center; 
+}
+.text-invoicing{
+    flex: 1;
+    /* Hace que el contenedor de texto ocupe todo el espacio disponible */
+    padding: 0;
+    /* Ajusta el espaciado entre el texto y la imagen */
+    max-width: 50%;
+    /* Limita el ancho máximo del contenedor de texto para evitar que sea demasiado ancho */
+    position: absolute;
+    display: flex; /* Activa el modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente */
+    flex-direction: column;
+}
+.form-invoicing {
+    flex: 1;
+    /* Hace que el contenedor de imagen ocupe todo el espacio disponible */
+    max-width: 40%;
+    /* Limita el ancho máximo del contenedor de imagen para evitar que sea demasiado ancho */
+    margin-left: 63%;
+    /* Alinea la imagen a la derecha */
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 20px;
+    font-size: .9rem;
+    display: flex; /* Activa el modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+form {
+    /* Mantiene la proporción de la imagen */
+    display: block;
+    /* Elimina el espacio adicional debajo de la imagen */
+    width: 28rem;
+}
+
+.form {
+    border: none;
+    font-size: 1rem;
+    height: auto;
+    margin: 5px 0 0 0;
+    outline: solid 1px #FFA400;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(255, 197, 100, 0.3);
+    color: #64696d;
+    margin-bottom: 30px;
+}
+
+input[type="submit"] {
+    outline: none;
+    border: none;
+    border-radius: 25px; /* Redondea las esquinas */
+    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+    background-color: #FFA400; /* Color de fondo normal */
+    color: white; /* Color de texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+input[type="submit"]:hover {
+    background-color: #ff6600; /* Cambia el color de fondo al pasar sobre el botón */
+}
+
+input[type="submit"]:active {
+    background-color: #ff6600; /* Cambia el color de fondo al hacer clic en el botón */
 }
 
 /* FAQ */
@@ -134,16 +378,50 @@ a:hover {
     background-color: rgba(209, 212, 216, 0.2);
     height: 400px;
 }
+
 footer {
     background-color: rgba(255, 103, 29, 0.8);
+    text-align: center;
+    /* Centra horizontalmente el contenido del footer */
 }
+
 footer .privacy {
+    display: flex;
+    /* Activa el modelo de caja flexible */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
     background-color: #504D48;
     color: #FFFFFF;
+    padding: 10px;
 }
+
+footer .footer-text {
+    margin-top: 1%;
+    color: #FFFFFF;
+}
+
+footer a {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+.privacy p {
+    font-size: 1rem;
+    margin: 2%;
+}
+
 footer img {
-    height: 100px;
+    height: 80px;
 }
+
 .social-media {
-    height: 30px;
+    height: 25px;
+    padding: 7px 4px 0px 10px;
+    margin: 0;
+}
+
+.div-social-media {
+    padding: 4%;
 }
