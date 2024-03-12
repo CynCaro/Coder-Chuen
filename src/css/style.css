@@ -54,7 +54,8 @@ header img {
 
 header nav ul {
     display: flex;
-    gap: 5rem;
+    gap: 2rem;
+    align-items: center;
 }
 
 ul {
@@ -67,7 +68,7 @@ ul {
 li {
     display: inline-block;
     /* Hace que los elementos de la lista sean en línea y no en bloque */
-    margin-right: 15px;
+    gap: 1rem;
     /* Espacio entre los elementos de la lista */
 }
 
@@ -113,6 +114,8 @@ form.form-search {
     gap: 5px;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    margin-left: .5rem;
 }
 
 form input[type="search"] {
@@ -458,6 +461,93 @@ footer img {
 
 
 
+/* Estilos para pantallas medianas (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    /* Aquí van los estilos específicos para pantallas con un ancho entre 601px y 1024px */
+    header {
+        height: 100px;
+        /* Ajusta la altura del encabezado */
+    }
+
+    header img {
+        width: 100px;
+        /* Ajusta el tamaño del logotipo para tablets */
+        margin-left: 15px;
+        /* Ajusta el margen izquierdo del logotipo */
+    }
+
+    header nav ul {
+        gap: 2rem;
+        /* Aumenta el espacio entre elementos del menú */
+    }
+
+    .padding,
+    .padding-grey,
+    .padding-green,
+    .padding-grey-invoicing {
+        display: block;
+        padding: 30px;
+        /* Ajusta el relleno general */
+        margin: 0;
+        /* Posiciona la imagen para superponer el texto */
+        overflow: hidden;
+        /* Evita que el contenido sobresalga del área del padding */
+        box-sizing: border-box;
+    }
+
+    .text {
+        position: relative;
+        padding: 30px;
+        /* Ajusta el relleno del texto */
+        max-width: 100%;
+        /* Limita el ancho máximo del contenedor de texto */
+    }
+
+    .image {
+        flex: 0;
+        max-width: 100%;
+        /* Limita el ancho máximo del contenedor de imagen */
+        margin-left: auto;
+        /* Centra la imagen */
+    }
+
+    .form-invoicing {
+        max-width: 100%;
+        /* Limita el ancho máximo del contenedor de formulario */
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .text-invoicing {
+        position: relative;
+        max-width: 100%;
+    }
+
+    .text-ubication {
+        padding: 30px;
+        /* Ajusta el relleno del texto */
+        max-width: 100%;
+        /* Limita el ancho máximo del contenedor de texto */
+    }
+
+    .days {
+        font-size: 5.7rem;
+    }
+
+    .ubication {
+        width: 100%;
+    }
+
+    form {
+        display: block;
+        width: 100%;
+        /* Limita el ancho del formulario */
+        margin: 20px 20px 0 20px;
+    }
+}
+
+
 
 /* Estilos para pantallas más pequeñas (móviles) */
 @media only screen and (max-width: 600px) {
@@ -476,118 +566,75 @@ footer img {
     }
 
     header nav ul {
-        gap: 3rem;
+        gap: 2rem;
         /* Reduce el espacio entre elementos del menú */
     }
 
-    
-
     .padding,
     .padding-grey,
     .padding-green,
     .padding-grey-invoicing {
-        padding: 20px;
+        display: block;
+        padding: 10px;
         /* Ajusta el relleno general */
+        margin: 0;
+        /* Posiciona la imagen para superponer el texto */
+        overflow: hidden;
+        /* Evita que el contenido sobresalga del área del padding */
+        box-sizing: border-box;
     }
 
     .text {
-        padding: 20px;
+        position: relative;
+        padding: 10px;
         /* Ajusta el relleno del texto */
         max-width: 100%;
-        /* Ocupa todo el ancho disponible */
-    }
-
-    .image {
-        max-width: 100%;
-        /* Ocupa todo el ancho disponible */
-        margin-left: auto;
-        /* Centra la imagen */
-    }
-
-    .form-invoicing {
-        max-width: 100%;
-        /* Ocupa todo el ancho disponible */
-        margin-left: 0;
-        /* Elimina el margen izquierdo */
-    }
-
-    form.form-search {
-        width: 100%;
-        /* Ocupa todo el ancho disponible */
-    }
-
-    .text-ubication {
-        padding: 20px;
-        /* Ajusta el relleno del texto */
-        max-width: 100%;
-        /* Ocupa todo el ancho disponible */
-    }
-
-    form {
-        width: 100%;
-        /* Ocupa todo el ancho disponible */
-    }
-}
-
-/* Estilos para pantallas medianas (tablets) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-    /* Aquí van los estilos específicos para pantallas con un ancho entre 601px y 1024px */
-    header {
-        height: 100px;
-        /* Ajusta la altura del encabezado */
-    }
-
-    header img {
-        width: 100px;
-        /* Ajusta el tamaño del logotipo para tablets */
-        margin-left: 15px;
-        /* Ajusta el margen izquierdo del logotipo */
-    }
-
-    header nav ul {
-        gap: 4rem;
-        /* Aumenta el espacio entre elementos del menú */
-    }
-
-    .padding,
-    .padding-grey,
-    .padding-green,
-    .padding-grey-invoicing {
-        padding: 30px;
-        /* Ajusta el relleno general */
-    }
-
-    .text {
-        padding: 30px;
-        /* Ajusta el relleno del texto */
-        max-width: 70%;
         /* Limita el ancho máximo del contenedor de texto */
     }
 
+    p {
+        font-size: .8rem;
+    }
+
     .image {
-        max-width: 50%;
+        flex: 0;
+        max-width: 100%;
         /* Limita el ancho máximo del contenedor de imagen */
         margin-left: auto;
         /* Centra la imagen */
     }
 
     .form-invoicing {
-        max-width: 50%;
+        max-width: 100%;
         /* Limita el ancho máximo del contenedor de formulario */
-        margin-left: 50px;
-        /* Alinea el formulario a la derecha */
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .text-invoicing {
+        position: relative;
+        max-width: 100%;
     }
 
     .text-ubication {
-        padding: 30px;
+        padding: 10px;
         /* Ajusta el relleno del texto */
-        max-width: 70%;
+        max-width: 100%;
         /* Limita el ancho máximo del contenedor de texto */
     }
 
+    .days {
+        font-size: 3.2rem;
+    }
+
+    .ubication {
+        width: 100%;
+    }
+
     form {
-        width: 50%;
+        display: block;
+        width: 100%;
         /* Limita el ancho del formulario */
+        margin: 20px 20px 0 20px;
     }
 }
