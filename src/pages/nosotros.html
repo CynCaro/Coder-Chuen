@@ -19,19 +19,25 @@
             <img src="../img/logotipo-chuen-color.svg" alt="logotipo-chuen-color">
         </a>
         <nav>
+            <input type="checkbox" id="check">
             <ul>
                 <li><a href="../pages/nosotros.html">Nosotros</a></li>
                 <li><a href="../pages/pastry.html">Pastry</a></li>
                 <li><a href="../pages/faq.html">FAQ Preguntas y Respuestas</a></li>
                 <li><a href="../index.html#contact">Contacto</a></li>
                 <li><a href="../pages/facturacion.html">Facturación</a></li>
+                <li>
+                    <form class="form-search" action="">
+                        <input type="search" placeholder="Buscar" required>
+                        <div class="btn">
+                            <i class="fa-solid fa-magnifying-glass fa-2xs"></i>
+                        </div>
+                    </form>
+                </li>
             </ul>
-            <form class="form-search" action="">
-                <input type="search" placeholder="Buscar" required>
-                <div class="btn">
-                    <i class="fa-solid fa-magnifying-glass fa-2xs"></i>
-                </div>
-            </form>
+            <label for="check" class="check-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
         </nav>
     </header>
 
