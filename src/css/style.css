@@ -8,6 +8,7 @@
 h1 {
     font-size: 3rem;
     font-weight: 600;
+    margin: 0.5rem 0;
 }
 
 h2 {
@@ -152,8 +153,8 @@ form input[type="search"]:focus {
 
 .padding-grey {
     display: flex;
-    flex-wrap: wrap;
-    /* Permite que los elementos se envuelvan si no caben en una sola fila */
+    /* flex-wrap: wrap;
+    Permite que los elementos se envuelvan si no caben en una sola fila */
     background-color: rgb(209, 212, 216, 0.3);
     margin: 0;
     padding: 0;
@@ -170,7 +171,7 @@ form input[type="search"]:focus {
     /* Hace que el contenedor de texto ocupe todo el espacio disponible */
     padding: 100px;
     /* Ajusta el espaciado entre el texto y la imagen */
-    max-width: 65%;
+    max-width: 50%;
     /* Limita el ancho máximo del contenedor de texto para evitar que sea demasiado ancho */
     position: absolute;
     /* Posiciona el texto encima de la imagen */
@@ -179,6 +180,7 @@ form input[type="search"]:focus {
     justify-content: center;
     /* Centra horizontalmente */
     flex-direction: column;
+    box-sizing: content-box;
 }
 
 .text p strong {
@@ -206,7 +208,7 @@ form input[type="search"]:focus {
 
 p {
     /* padding-right: 50%; */
-    margin-top: 5%;
+    margin-top: 1rem;
 }
 
 /* Carrusel de imágenes */
@@ -249,13 +251,13 @@ p {
     /* Coloca el elemento a la izquierda del contenedor principal */
 }
 
-/* Frase */
+/* Frase
 .quote {
     background-color: #FFC564;
     text-align: center;
-    /* Centra el contenido horizontalmente */
+    /* Centra el contenido horizontalmente 
     overflow: hidden;
-}
+} */
 
 .quote img {
     max-width: 100%;
@@ -297,8 +299,8 @@ p {
 /* Nosotros */
 .padding-green {
     display: flex;
-    flex-wrap: wrap;
-    /* Permite que los elementos se envuelvan si no caben en una sola fila */
+    /* flex-wrap: wrap;
+    Permite que los elementos se envuelvan si no caben en una sola fila */
     background-color: rgb(72, 181, 166, 0.2);
     margin: 0;
     padding: 0;
@@ -470,6 +472,7 @@ footer img {
 
 
 
+
 /* Estilos para pantallas medianas (tablets) */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
 
@@ -536,6 +539,7 @@ footer img {
     /* Asegura que el menú se muestre cuando se active el botón de hamburguesa */
     #check:checked ~ ul {
         left: 0;
+        height: auto;
     }
 
     form.form-search {
@@ -583,14 +587,12 @@ footer img {
         /* Ajusta el relleno del texto */
         max-width: 100%;
         /* Limita el ancho máximo del contenedor de texto */
+        align-items: center;
     }
 
     .image {
-        flex: 0;
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de imagen */
-        margin-left: auto;
-        /* Centra la imagen */
+        max-width: 70%; /* Ancho máximo para tablet */
+        margin: 0 auto; /* Centra la imagen en tablet */
     }
 
     .form-invoicing {
@@ -603,6 +605,10 @@ footer img {
     .text-invoicing {
         position: relative;
         max-width: 100%;
+    }
+
+    .custom-link {
+        color: #302E29;
     }
 
     .text-ubication {
@@ -627,6 +633,7 @@ footer img {
         margin: 20px 20px 0 20px;
     }
 }
+
 
 
 
@@ -697,6 +704,7 @@ footer img {
     /* Asegura que el menú se muestre cuando se active el botón de hamburguesa */
     #check:checked ~ ul {
         left: 0;
+        height: auto;
     }
 
     /* Estilos para el formulario de búsqueda */
@@ -746,18 +754,16 @@ footer img {
         /* Ajusta el relleno del texto */
         max-width: 100%;
         /* Limita el ancho máximo del contenedor de texto */
+        align-items: center;
+    }
+
+    .image {
+        max-width: 90%; /* Ancho máximo para tablet */
+        margin: 0 auto; /* Centra la imagen en tablet */
     }
 
     p {
         font-size: .8rem;
-    }
-
-    .image {
-        flex: 0;
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de imagen */
-        margin-left: auto;
-        /* Centra la imagen */
     }
 
     .form-invoicing {
@@ -770,6 +776,10 @@ footer img {
     .text-invoicing {
         position: relative;
         max-width: 100%;
+    }
+
+    .custom-link {
+        color: #302E29;
     }
 
     .text-ubication {
@@ -792,5 +802,31 @@ footer img {
         width: 100%;
         /* Limita el ancho del formulario */
         margin: 20px 20px 0 20px;
+    }
+}
+
+
+
+
+/* Media query para pantallas entre 1236px y 1164px */
+@media screen and (max-width: 1236px) and (min-width: 1164px) {
+    .text { 
+        max-width: 50%;
+        padding-right: 20px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* Media query para pantallas entre 1164px y 1026px */
+@media screen and (max-width: 1164px) and (min-width: 1026px) {
+    p {
+        font-weight: 300;
+        font-size: 1rem;
     }
 }

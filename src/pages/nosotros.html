@@ -44,7 +44,7 @@
     <main>
         <!-- Carrusel de imágenes -->
         <section class="banner">
-            <img src="../img/banner4.jpg" alt="portada tarta de frutos rojos">
+            <img src="../img/banner3.jpg" alt="portada tarta de frutos rojos">
             <div class="custom-div">
                 <img src="../img/texto-nosotros.png" alt="texto nosotros" </div>
         </section>
@@ -77,7 +77,14 @@
                 </p>
             </div>
             <div class="image">
-                <img src="../img/img-nosotros.png" alt="ilustración y foto de la propietaria">
+                <picture>
+                    <!-- Primero, la imagen para pantallas grandes -->
+                    <source srcset="../img/nosotros-desktop.webp" media="(min-width: 1025px)"  alt="ilustración cocina y foto de la propietaria">
+                    <!-- Luego, la imagen para tablet -->
+                    <source srcset="../img/nosotros-mobile.webp" media="(min-width: 481px)"  alt="ilustración cocina y foto de la propietaria">
+                    <!-- Por último, la imagen por defecto para dispositivos más pequeños -->
+                    <img src="../img/nosotros-mobile.webp" alt="ilustración cocina y foto de la propietaria">
+                </picture>
             </div>
         </section>
     </main>
