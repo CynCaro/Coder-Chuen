@@ -42,7 +42,7 @@
     <main>
         <!-- Carrusel de imágenes -->
         <section class="banner">
-            <img src="./img/banner1.jpg" alt="portada tarta de frutos rojos">
+            <img src="./img/banner1.0.jpg" alt="portada tarta de frutos rojos">
         </section>
 
         <!-- <section class="quote">
@@ -91,7 +91,15 @@
                 </p>
             </div>
             <div class="image">
-                <img src="./img/img-index.png" alt="ilustración y foto de la propietaria">
+                <!-- Utilizamos la etiqueta picture para definir diferentes fuentes de imágenes -->
+                <picture>
+                    <!-- Primero, la imagen para pantallas grandes -->
+                    <source srcset="./img/index-desktop.webp" media="(min-width: 1025px)"  alt="ilustración chango y foto de la propietaria">
+                    <!-- Luego, la imagen para tablet -->
+                    <source srcset="./img/index-mobile.webp" media="(min-width: 481px)"  alt="ilustración chango y foto de la propietaria">
+                    <!-- Por último, la imagen por defecto para dispositivos más pequeños -->
+                    <img src="./img/index-mobile.webp" alt="ilustración chango y foto de la propietaria">
+                </picture>
             </div>
         </section>
     </main>
