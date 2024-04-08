@@ -8,7 +8,7 @@
 h1 {
     font-size: 3rem;
     font-weight: 600;
-    margin: 0.5rem 0;
+    /* margin: 0.5rem 0; */
 }
 
 h2 {
@@ -160,8 +160,7 @@ form input[type="search"]:focus {
     padding: 0;
     position: relative;
     /* Posiciona la imagen para superponer el texto */
-    overflow: hidden;
-    /* Evita que el contenido sobresalga del área del padding */
+    overflow: hidden;/* Evita que el contenido sobresalga del área del padding */
     box-sizing: border-box;
     align-items: center;
 }
@@ -280,6 +279,7 @@ p {
 .text-ubication {
     flex: 1;
     max-width: 65%;
+    display: flex;
     flex-direction: column;
     padding: 50px;
     /* Ajusta el padding según sea necesario */
@@ -336,17 +336,15 @@ p {
     max-width: 50%;
     /* Limita el ancho máximo del contenedor de texto para evitar que sea demasiado ancho */
     position: absolute;
-    display: flex;
-    /* Activa el modelo de caja flexible */
-    justify-content: center;
-    /* Centra horizontalmente */
+    display: flex; /* Activa el modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente */
     flex-direction: column;
 }
 
 .form-invoicing {
     flex: 1;
     /* Hace que el contenedor de imagen ocupe todo el espacio disponible */
-    max-width: 40%;
+    max-width: 37%;
     /* Limita el ancho máximo del contenedor de imagen para evitar que sea demasiado ancho */
     margin-left: 63%;
     /* Alinea la imagen a la derecha */
@@ -386,16 +384,12 @@ form {
 input[type="submit"] {
     outline: none;
     border: none;
-    border-radius: 25px;
-    /* Redondea las esquinas */
-    padding: 10px 20px;
-    /* Ajusta el relleno según tus necesidades */
-    background-color: #FFA400;
-    /* Color de fondo normal */
-    color: white;
-    /* Color de texto */
-    cursor: pointer;
-    /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 25px; /* Redondea las esquinas */
+    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+    background-color: #FFA400; /* Color de fondo normal */
+    color: white; /* Color de texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin: 0;
 }
 
 input[type="submit"]:hover {
@@ -478,7 +472,7 @@ footer img {
 
     /* Aquí van los estilos específicos para pantallas con un ancho entre 601px y 1024px */
     header {
-        width: 100%s;
+        width: 100%;
         height: 60px; /* Ajusta la altura del encabezado */
         position: fixed;
         z-index: 1000; /* Asegura que el encabezado esté por encima de todo */
@@ -569,16 +563,19 @@ footer img {
 
     .padding,
     .padding-grey,
-    .padding-green,
-    .padding-grey-invoicing {
+    .padding-green {
         display: block;
-        padding: 30px;
-        /* Ajusta el relleno general */
         margin: 0;
         /* Posiciona la imagen para superponer el texto */
         overflow: hidden;
         /* Evita que el contenido sobresalga del área del padding */
         box-sizing: border-box;
+        padding: 30px 50px;
+    }
+
+    .padding-grey-invoicing {
+        display: block;
+        padding: 100px 100px 50px 100px;
     }
 
     .text {
@@ -593,18 +590,22 @@ footer img {
     .image {
         max-width: 70%; /* Ancho máximo para tablet */
         margin: 0 auto; /* Centra la imagen en tablet */
+        margin: 20px auto 0 auto;
     }
 
     .form-invoicing {
         max-width: 100%;
         /* Limita el ancho máximo del contenedor de formulario */
         margin: 0;
-        margin-top: 20px;
     }
 
     .text-invoicing {
         position: relative;
         max-width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 8%;
     }
 
     .custom-link {
@@ -612,10 +613,11 @@ footer img {
     }
 
     .text-ubication {
-        padding: 30px;
-        /* Ajusta el relleno del texto */
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de texto */
+        padding: 30px; /* Ajusta el relleno del texto */
+        max-width: 100%; /* Limita el ancho máximo del contenedor de texto */
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .days {
@@ -630,7 +632,7 @@ footer img {
         display: block;
         width: 100%;
         /* Limita el ancho del formulario */
-        margin: 20px 20px 0 20px;
+        margin: 20px;
     }
 }
 
@@ -736,16 +738,20 @@ footer img {
 
     .padding,
     .padding-grey,
-    .padding-green,
-    .padding-grey-invoicing {
+    .padding-green {
         display: block;
-        padding: 10px;
         /* Ajusta el relleno general */
         margin: 0;
         /* Posiciona la imagen para superponer el texto */
         overflow: hidden;
         /* Evita que el contenido sobresalga del área del padding */
         box-sizing: border-box;
+        padding: 30px 50px;
+    }
+
+    .padding-grey-invoicing {
+        display: block;
+        padding: 100px 30px 50px 30px;
     }
 
     .text {
@@ -758,24 +764,26 @@ footer img {
     }
 
     .image {
-        max-width: 90%; /* Ancho máximo para tablet */
+        max-width: 100%; /* Ancho máximo para tablet */
         margin: 0 auto; /* Centra la imagen en tablet */
     }
 
     p {
-        font-size: .8rem;
+        font-size: 1rem;
     }
 
     .form-invoicing {
         max-width: 100%;
         /* Limita el ancho máximo del contenedor de formulario */
         margin: 0;
-        margin-top: 20px;
     }
 
     .text-invoicing {
         position: relative;
         max-width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 9%;
     }
 
     .custom-link {
@@ -783,10 +791,10 @@ footer img {
     }
 
     .text-ubication {
-        padding: 10px;
-        /* Ajusta el relleno del texto */
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de texto */
+        padding: 10px; /* Ajusta el relleno del texto */
+        max-width: 100%; /* Limita el ancho máximo del contenedor de texto */
+        align-items: center;
+        text-align: center;
     }
 
     .days {
@@ -801,7 +809,30 @@ footer img {
         display: block;
         width: 100%;
         /* Limita el ancho del formulario */
-        margin: 20px 20px 0 20px;
+        margin: 20px;
+    }
+
+    footer .footer-text {
+        margin-top: 1%;
+        color: #FFFFFF;
+    }
+    
+    footer a { /* link texto redes sociales */
+        font-size: 1rem;
+        color: #FFFFFF;
+    }
+    
+    .privacy p {
+        font-size: .8rem;
+        margin: 2%;
+    }
+    
+    footer img {
+        height: 60px;
+    }
+
+    .social-media {
+        height: 24px;
     }
 }
 
