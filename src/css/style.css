@@ -22,6 +22,11 @@ h3 {
     color: #503AB5;
 }
 
+h5 {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
+
 p {
     font-weight: 300;
     font-size: 1.2rem;
@@ -68,7 +73,8 @@ ul {
 }
 
 li {
-    display: inline-block; /* Hace que los elementos de la lista sean en línea y no en bloque */
+    display: inline-block;
+    /* Hace que los elementos de la lista sean en línea y no en bloque */
 }
 
 a {
@@ -160,7 +166,8 @@ form input[type="search"]:focus {
     padding: 0;
     position: relative;
     /* Posiciona la imagen para superponer el texto */
-    overflow: hidden;/* Evita que el contenido sobresalga del área del padding */
+    overflow: hidden;
+    /* Evita que el contenido sobresalga del área del padding */
     box-sizing: border-box;
     align-items: center;
 }
@@ -211,18 +218,50 @@ p {
 }
 
 /* Carrusel de imágenes */
+.btn-banner .fa {
+    margin-right: 5px;
+    /* Ajusta el espacio según tus necesidades */
+    font-size: 1rem;
+}
+
+.btn-banner {
+    padding: .75rem 1rem;
+    border-radius: 10px;
+    background-color: #FFA400;
+    border: none;
+    color: #FFFFFF;
+}
+
+.p-banner {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0;
+    margin-top: 0;
+}
+
+.text-banner {
+    z-index: 1;
+    margin-bottom: 1rem;
+}
+
 .banner {
     background-size: cover;
-    height: 500px;
+    object-fit: cover;
+    height: 60%;
     max-width: 100%;
     position: relative;
-    overflow: hidden; /* Evita que la imagen sobresalga del contenedor si es más grande */
-    display: flex; /* Usamos flexbox para centrar verticalmente */
-    align-items: center; /* Centra verticalmente los elementos */
+    overflow: hidden;
+    /* Evita que la imagen sobresalga del contenedor si es más grande */
+    display: flex;
+    /* Usamos flexbox para centrar verticalmente */
+    align-items: center;
+    /* Centra verticalmente los elementos */
 }
 
 .carousel {
-    position: static !important; /* Cambia la posición a estática, anulando la posición relativa de Bootstrap */
+    position: static !important;
+    /* Cambia la posición a estática, anulando la posición relativa de Bootstrap */
 }
 
 /* Flechas de navegación */
@@ -231,11 +270,13 @@ p {
     top: 50%;
     transform: translateY(-50%);
     width: 40px;
-    height: 40px; 
+    height: 40px;
     padding: 5px;
-    border-radius: 50%; /* Hace que las flechas sean redondas */
+    border-radius: 50%;
+    /* Hace que las flechas sean redondas */
     opacity: initial;
-    z-index: 2; /* Asegura que estén sobre el contenido del carrusel */
+    z-index: 2;
+    /* Asegura que estén sobre el contenido del carrusel */
 }
 
 /* Otras secciones banner */
@@ -253,17 +294,21 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(48, 46, 41, 0.5); /* Color de fondo con transparencia */
-    z-index: 0; /* Ajusta el z-index para que esté detrás del contenido */
+    background-color: rgba(48, 46, 41, 0.35);
+    /* Color de fondo con transparencia */
+    z-index: 1;
+    /* Ajusta el z-index para que esté detrás del contenido */
 }
-
 
 .custom-div {
     /* texto */
     display: flex;
     position: absolute;
-    bottom: 0; /* Coloca el elemento en la parte inferior del contenedor principal */
-    left: 25px; /* Coloca el elemento a la izquierda del contenedor principal */
+    bottom: 0;
+    /* Coloca el elemento en la parte inferior del contenedor principal */
+    left: 25px;
+    /* Coloca el elemento a la izquierda del contenedor principal */
+    z-index: 1;
 }
 
 /* Frase
@@ -328,6 +373,22 @@ p {
     align-items: center;
 }
 
+/* Faq */
+.accordion-button {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #503AB5;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #FFFFFF;
+    color: #503AB5;
+}
+
+.accordion-body {
+    font-weight: 300;
+}
+
 /* Facturación */
 .padding-grey-invoicing {
     display: flex;
@@ -352,8 +413,10 @@ p {
     max-width: 50%;
     /* Limita el ancho máximo del contenedor de texto para evitar que sea demasiado ancho */
     position: absolute;
-    display: flex; /* Activa el modelo de caja flexible */
-    justify-content: center; /* Centra horizontalmente */
+    display: flex;
+    /* Activa el modelo de caja flexible */
+    justify-content: center;
+    /* Centra horizontalmente */
     flex-direction: column;
 }
 
@@ -400,11 +463,16 @@ form {
 input[type="submit"] {
     outline: none;
     border: none;
-    border-radius: 25px; /* Redondea las esquinas */
-    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
-    background-color: #FFA400; /* Color de fondo normal */
-    color: white; /* Color de texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 25px;
+    /* Redondea las esquinas */
+    padding: 10px 20px;
+    /* Ajusta el relleno según tus necesidades */
+    background-color: #FFA400;
+    /* Color de fondo normal */
+    color: white;
+    /* Color de texto */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
     margin: 0;
 }
 
@@ -480,6 +548,25 @@ footer img {
     padding: 4%;
 }
 
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 2.5rem;
+}
+
 
 
 
@@ -489,9 +576,11 @@ footer img {
     /* Aquí van los estilos específicos para pantallas con un ancho entre 601px y 1024px */
     header {
         width: 100%;
-        height: 60px; /* Ajusta la altura del encabezado */
+        height: 60px;
+        /* Ajusta la altura del encabezado */
         position: fixed;
-        z-index: 1000; /* Asegura que el encabezado esté por encima de todo */
+        z-index: 1000;
+        /* Asegura que el encabezado esté por encima de todo */
     }
 
     header img {
@@ -503,7 +592,7 @@ footer img {
 
     header nav ul {
         display: block;
-    } 
+    }
 
     .check-btn {
         display: block;
@@ -511,27 +600,34 @@ footer img {
 
     ul {
         position: absolute;
-        top: 60px; /* Se pegará al borde superior del viewport */
+        top: 60px;
+        /* Se pegará al borde superior del viewport */
         width: 100%;
-        height: calc(61vh - 60px); /* Altura de la pantalla menos la altura del encabezado */
+        height: calc(61vh - 60px);
+        /* Altura de la pantalla menos la altura del encabezado */
         background: #FFA400;
         text-align: left;
         top: 60px;
         left: -100%;
         transition: all .55s;
-        z-index: 999; /* Asegura que el menú esté por encima del contenido */
-        overflow-y: visible; /* Permite que el contenido se ajuste automáticamente */
-        padding-top: 20px; /* Añade un poco de espacio en la parte superior del menú */
+        z-index: 999;
+        /* Asegura que el menú esté por encima del contenido */
+        overflow-y: visible;
+        /* Permite que el contenido se ajuste automáticamente */
+        padding-top: 20px;
+        /* Añade un poco de espacio en la parte superior del menú */
         padding-bottom: 5px;
     }
 
     li {
-        display: block; /* Hace que los elementos de la lista sean en bloque y no en línea */
-        margin-bottom: 20px; /* Añade espacio entre elementos de lista */
+        display: block;
+        /* Hace que los elementos de la lista sean en bloque y no en línea */
+        margin-bottom: 20px;
+        /* Añade espacio entre elementos de lista */
         margin-left: 25px;
         font-size: 1.3rem;
     }
-    
+
     a {
         text-decoration: none;
         /* Elimina el subrayado predeterminado de los enlaces */
@@ -541,13 +637,14 @@ footer img {
         /* Peso de la fuente */
     }
 
-    li a:hover, li a.active {
+    li a:hover,
+    li a.active {
         background: none;
         color: #FFFFFF;
     }
 
     /* Asegura que el menú se muestre cuando se active el botón de hamburguesa */
-    #check:checked ~ ul {
+    #check:checked~ul {
         left: 0;
         height: auto;
     }
@@ -574,7 +671,34 @@ footer img {
     }
 
     .btn i {
-        font-size: 1.2rem; /* Ajusta el tamaño del ícono según tus necesidades */
+        font-size: 1.2rem;
+        /* Ajusta el tamaño del ícono según tus necesidades */
+    }
+
+    /* Carrusel de imágenes */
+    h5 {
+        font-size: 1.85rem;
+    }
+
+    .btn-banner .fa {
+        margin-right: 5px;
+        /* Ajusta el espacio según tus necesidades */
+        font-size: .70rem;
+    }
+
+    .btn-banner {
+        font-size: .75rem;
+        padding: .50rem .75rem;
+        border-radius: 5px;
+    }
+
+    .p-banner {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .text-center {
+        transform: translate(-50%, -20%) !important;
     }
 
     .padding,
@@ -604,8 +728,10 @@ footer img {
     }
 
     .image {
-        max-width: 70%; /* Ancho máximo para tablet */
-        margin: 0 auto; /* Centra la imagen en tablet */
+        max-width: 70%;
+        /* Ancho máximo para tablet */
+        margin: 0 auto;
+        /* Centra la imagen en tablet */
         margin: 20px auto 0 auto;
     }
 
@@ -629,8 +755,10 @@ footer img {
     }
 
     .text-ubication {
-        padding: 30px; /* Ajusta el relleno del texto */
-        max-width: 100%; /* Limita el ancho máximo del contenedor de texto */
+        padding: 30px;
+        /* Ajusta el relleno del texto */
+        max-width: 100%;
+        /* Limita el ancho máximo del contenedor de texto */
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -662,9 +790,11 @@ footer img {
     /* Estilos para el encabezado */
     header {
         width: 100%;
-        height: 60px; /* Ajusta la altura del encabezado */
+        height: 60px;
+        /* Ajusta la altura del encabezado */
         position: fixed;
-        z-index: 1000; /* Asegura que el encabezado esté por encima de todo */
+        z-index: 1000;
+        /* Asegura que el encabezado esté por encima de todo */
     }
 
     header img {
@@ -676,7 +806,7 @@ footer img {
 
     header nav ul {
         display: block;
-    } 
+    }
 
     .check-btn {
         display: block;
@@ -685,26 +815,33 @@ footer img {
     /* Estilos para el menú desplegable */
     ul {
         position: absolute;
-        top: 60px; /* Se pegará debajo del encabezado */
+        top: 60px;
+        /* Se pegará debajo del encabezado */
         width: 100%;
-        height: calc(61vh - 60px); /* Altura de la pantalla menos la altura del encabezado */
+        height: calc(61vh - 60px);
+        /* Altura de la pantalla menos la altura del encabezado */
         background: #FFA400;
         text-align: left;
         left: -100%;
         transition: all .55s;
-        z-index: 999; /* Asegura que el menú esté por encima del contenido */
-        overflow-y: visible; /* Permite que el contenido se ajuste automáticamente */
-        padding-top: 20px; /* Añade un poco de espacio en la parte superior del menú */
+        z-index: 999;
+        /* Asegura que el menú esté por encima del contenido */
+        overflow-y: visible;
+        /* Permite que el contenido se ajuste automáticamente */
+        padding-top: 20px;
+        /* Añade un poco de espacio en la parte superior del menú */
         padding-bottom: 5px;
     }
 
     li {
-        display: block; /* Hace que los elementos de la lista sean en bloque y no en línea */
-        margin-bottom: 20px; /* Añade espacio entre elementos de lista */
+        display: block;
+        /* Hace que los elementos de la lista sean en bloque y no en línea */
+        margin-bottom: 20px;
+        /* Añade espacio entre elementos de lista */
         margin-left: 25px;
         font-size: 1.3rem;
     }
-    
+
     a {
         text-decoration: none;
         /* Elimina el subrayado predeterminado de los enlaces */
@@ -714,13 +851,14 @@ footer img {
         /* Peso de la fuente */
     }
 
-    li a:hover, li a.active {
+    li a:hover,
+    li a.active {
         background: none;
         color: #FFFFFF;
     }
 
     /* Asegura que el menú se muestre cuando se active el botón de hamburguesa */
-    #check:checked ~ ul {
+    #check:checked~ul {
         left: 0;
         height: auto;
     }
@@ -749,7 +887,59 @@ footer img {
     }
 
     .btn i {
-        font-size: 1.2rem; /* Ajusta el tamaño del ícono según tus necesidades */
+        font-size: 1.2rem;
+        /* Ajusta el tamaño del ícono según tus necesidades */
+    }
+
+    /* Carrusel de imágenes */
+    h5 {
+        font-size: 1rem;
+    }
+
+    .btn-banner .fa {
+        margin-right: 5px;
+        /* Ajusta el espacio según tus necesidades */
+        font-size: .70rem;
+    }
+
+    .btn-banner {
+        font-size: .75rem;
+        padding: .50rem .75rem;
+        border-radius: 50px;
+    }
+
+    .p-banner {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .text-center {
+        transform: translate(-50%, -20%) !important;
+    }
+
+    .banner {
+        height: 15rem;
+        width: auto;
+        align-items: center;
+        /* Centra verticalmente los elementos */
+    }
+
+    .banner img {
+        width: auto;
+    }
+
+    .carousel-indicators {
+        position: unset;
+    }
+
+    /* Flechas de navegación */
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 60%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        padding: 5px;
     }
 
     .padding,
@@ -780,8 +970,10 @@ footer img {
     }
 
     .image {
-        max-width: 100%; /* Ancho máximo para tablet */
-        margin: 0 auto; /* Centra la imagen en tablet */
+        max-width: 100%;
+        /* Ancho máximo para tablet */
+        margin: 0 auto;
+        /* Centra la imagen en tablet */
     }
 
     p {
@@ -807,8 +999,10 @@ footer img {
     }
 
     .text-ubication {
-        padding: 10px; /* Ajusta el relleno del texto */
-        max-width: 100%; /* Limita el ancho máximo del contenedor de texto */
+        padding: 10px;
+        /* Ajusta el relleno del texto */
+        max-width: 100%;
+        /* Limita el ancho máximo del contenedor de texto */
         align-items: center;
         text-align: center;
     }
@@ -832,17 +1026,18 @@ footer img {
         margin-top: 1%;
         color: #FFFFFF;
     }
-    
-    footer a { /* link texto redes sociales */
+
+    footer a {
+        /* link texto redes sociales */
         font-size: 1rem;
         color: #FFFFFF;
     }
-    
+
     .privacy p {
         font-size: .8rem;
         margin: 2%;
     }
-    
+
     footer img {
         height: 60px;
     }
@@ -857,7 +1052,7 @@ footer img {
 
 /* Media query para pantallas entre 1236px y 1164px */
 @media screen and (max-width: 1236px) and (min-width: 1164px) {
-    .text { 
+    .text {
         max-width: 50%;
         padding-right: 20px;
     }
@@ -875,5 +1070,12 @@ footer img {
     p {
         font-weight: 300;
         font-size: 1rem;
+    }
+
+    /* Flechas de navegación */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 60px;
+        height: 60px;
     }
 }
