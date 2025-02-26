@@ -1,1081 +1,878 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Jost', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
 }
 
 h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    /* margin: 0.5rem 0; */
+  color: #302e29;
+  font-size: 3rem;
+  font-weight: 500;
 }
 
 h2 {
-    font-size: 2rem;
-    font-weight: 300;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #503AB5;
-}
-
-h5 {
-    font-size: 2.5rem;
-    color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #503ab5;
 }
 
 p {
-    font-weight: 300;
-    font-size: 1.2rem;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
 }
 
 nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-/* Estilos del menú */
+/* ENCABEZADO */
 header {
-    width: 100%;
-    background-color: #FFFFFF;
-    height: 60px;
-    padding: .5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Centra verticalmente el contenido del header */
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
+/* Logotipo */
 header img {
-    /* Logotipo */
-    width: 100px;
-    /* Ajusta el valor según tus necesidades */
-    height: auto;
-    /* Mantiene la proporción original */
-    margin-left: 25px;
-    object-fit: contain;
+  width: 100px;
+  height: auto;
+  margin-left: 25px;
 }
 
-header nav ul {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-ul {
-    list-style: none;
-    /* Elimina los estilos de viñetas predeterminados */
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    display: inline-block;
-    /* Hace que los elementos de la lista sean en línea y no en bloque */
-}
-
-a {
-    text-decoration: none;
-    /* Elimina el subrayado predeterminado de los enlaces */
-    color: #302E29;
-    /* Color del texto del enlace */
-    font-weight: 400;
-    /* Peso de la fuente */
-}
-
-a:hover {
-    color: #ff6600;
-    /* Cambia el color del texto del enlace al pasar el ratón sobre él */
-}
-
+/* Botón hamburguesa */
 .check-btn {
-    font-size: 2rem;
-    color: #ff6600;
-    margin: 1rem;
-    cursor: pointer;
-    display: none;
+  font-size: 2rem;
+  color: #ff6600;
+  cursor: pointer;
+  display: block;
+  z-index: 10001;
 }
 
+/* Oculta visualmente el checkbox */
 #check {
-    display: none;
+  display: none;
 }
 
-.btn {
-    width: 30px;
-    /* Ajusta el ancho del botón */
-    height: 30px;
-    color: #FFFFFF;
-    background-color: #ff6600;
-    /* Color de fondo del botón */
-    border-radius: 50%;
-    /* Hace que el botón tenga forma de círculo */
-    display: flex;
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente */
+/* Menú desplegable (Mobile y Tablet) */
+nav ul {
+  position: absolute;
+  top: 60px; /* Debajo del header */
+  left: -100%; /* Oculto inicialmente */
+  width: 100%; /* Ocupa todo el ancho */
+  background: #302e29; /* Fondo oscuro */
+  padding: 20px 20px;
+  z-index: 9999;
+  transition: all 0.5s ease; /* Transición suave */
+  list-style: none;
 }
 
-.btn i {
-    font-size: 1rem;
-    /* Ajusta el tamaño del ícono */
+/* Elementos del menú */
+ul li {
+  margin: 10px 25px;
 }
 
+ul a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+ul a:hover {
+  color: #ff6600;
+}
+
+/* Muestra el menú al activar el checkbox */
+#check:checked + label + ul {
+  left: 0; /* Asegúrate de que afecta al menú directamente */
+}
+
+/* Barra de búsqueda */
 form.form-search {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    margin: 0;
-    margin-right: 25px;
-    justify-content: flex-end;
-    width: auto;
-}
-
-form input[type="search"] {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    /* Redondea el borde */
-    outline: none;
-    /* Elimina el contorno al enfocar */
-    font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%; /* Ocupará el ancho completo */
+  justify-content: flex-end;
 }
 
 form input[type="search"]:focus {
-    border-color: #FFA400;
-    /* Cambia el color del borde al enfocar */
+  border-color: #ffa400;
 }
 
-/* Estilos del contenido */
-.padding {
-    display: flex;
-    flex-wrap: wrap;
-    /* Permite que los elementos se envuelvan si no caben en una sola fila */
-    padding: 50px;
+/* Contenedor del formulario de búsqueda */
+form.form-search {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  background: transparent;
 }
 
-.padding-grey {
-    display: flex;
-    /* flex-wrap: wrap;
-    Permite que los elementos se envuelvan si no caben en una sola fila */
-    background-color: rgb(209, 212, 216, 0.3);
-    margin: 0;
-    padding: 0;
-    position: relative;
-    /* Posiciona la imagen para superponer el texto */
-    overflow: hidden;
-    /* Evita que el contenido sobresalga del área del padding */
-    box-sizing: border-box;
-    align-items: center;
+/* Input de búsqueda */
+form input[type="search"] {
+  flex-grow: 1;
+  width: 100%; /* Ocupará todo el ancho disponible */
+  padding: 10px 20px;
+  border: 2px solid #ffa100;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  outline: none;
+  color: #000;
 }
 
-.text {
-    flex: 1;
-    /* Hace que el contenedor de texto ocupe todo el espacio disponible */
-    padding: 100px;
-    /* Ajusta el espaciado entre el texto y la imagen */
-    max-width: 50%;
-    /* Limita el ancho máximo del contenedor de texto para evitar que sea demasiado ancho */
-    position: absolute;
-    /* Posiciona el texto encima de la imagen */
-    display: flex;
-    /* Activa el modelo de caja flexible */
-    justify-content: center;
-    /* Centra horizontalmente */
-    flex-direction: column;
-    box-sizing: content-box;
+/* Ajustar botón de búsqueda para que esté dentro del input visualmente */
+.btn-search {
+  width: 39px;
+  height: 39px;
+  background-color: #ffa100;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-left: -52px; /* Ajusta el botón sobre el input */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.text p strong {
-    font-weight: 400;
-    /* Aplica negrita al texto dentro del párrafo */
+/* Asegurar que el botón no sea afectado por Bootstrap */
+.btn-search:focus,
+.btn-search:active {
+  outline: none !important;
 }
 
-.image {
-    flex: 1;
-    /* Hace que el contenedor de imagen ocupe todo el espacio disponible */
-    max-width: 60%;
-    /* Limita el ancho máximo del contenedor de imagen para evitar que sea demasiado ancho */
-    margin-left: auto;
-    /* Alinea la imagen a la derecha */
+/* Efecto hover */
+.btn-search:hover {
+  background-color: #e08900;
+  transform: scale(1.05);
 }
 
-.image img {
-    width: 100%;
-    /* Asegura que la imagen ocupe todo el espacio disponible en su contenedor */
-    height: auto;
-    /* Mantiene la proporción de la imagen */
-    display: block;
-    /* Elimina el espacio adicional debajo de la imagen */
-}
-
-p {
-    /* padding-right: 50%; */
-    margin-top: 1rem;
+/* Estilo del icono dentro del botón */
+.btn-search i {
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 /* Carrusel de imágenes */
 .btn-banner .fa {
-    margin-right: 5px;
-    /* Ajusta el espacio según tus necesidades */
-    font-size: 1rem;
-}
-
-.btn-banner {
-    padding: .75rem 1rem;
-    border-radius: 10px;
-    background-color: #FFA400;
-    border: none;
-    color: #FFFFFF;
-}
-
-.p-banner {
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    font-weight: 300;
-    padding: 0;
-    margin-top: 0;
-}
-
-.text-banner {
-    z-index: 1;
-    margin-bottom: 1rem;
+  margin-right: 5px;
+  font-size: 1rem;
 }
 
 .banner {
-    background-size: cover;
-    object-fit: cover;
-    height: 60%;
-    max-width: 100%;
-    position: relative;
-    overflow: hidden;
-    /* Evita que la imagen sobresalga del contenedor si es más grande */
-    display: flex;
-    /* Usamos flexbox para centrar verticalmente */
-    align-items: center;
-    /* Centra verticalmente los elementos */
+  background-size: cover;
+  object-fit: cover;
+  height: 60%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .carousel {
-    position: static !important;
-    /* Cambia la posición a estática, anulando la posición relativa de Bootstrap */
+  position: static !important;
 }
 
-/* Flechas de navegación */
 .carousel-control-prev,
 .carousel-control-next {
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 50%;
-    /* Hace que las flechas sean redondas */
-    opacity: initial;
-    z-index: 2;
-    /* Asegura que estén sobre el contenido del carrusel */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  opacity: initial;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.30);
+  margin-left: 15px;
+  margin-right: 15px;
+  transition: background 0.3s ease, filter 0.3s ease; /* Transición suave para el cambio */
 }
 
-/* Otras secciones banner */
+/* Cambios en hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: #ffffff; /* Fondo 100% blanco */
+}
+
+/* Oscurecer el ícono en hover */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(0.1); /* Ajusta el valor según el nivel de oscuridad deseado */
+  transition: filter 0.3s ease; /* Transición suave para el cambio */
+}
+
 .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Mantiene la proporción de la imagen y cubre todo el contenedor */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(48, 46, 41, 0.35);
-    /* Color de fondo con transparencia */
-    z-index: 1;
-    /* Ajusta el z-index para que esté detrás del contenido */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .custom-div {
-    /* texto */
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    /* Coloca el elemento en la parte inferior del contenedor principal */
-    left: 25px;
-    /* Coloca el elemento a la izquierda del contenedor principal */
-    z-index: 1;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
 }
 
-/* Frase
-.quote {
-    background-color: #FFC564;
-    text-align: center;
-    /* Centra el contenido horizontalmente 
-    overflow: hidden;
-} */
-
-.quote img {
-    max-width: 100%;
-    /* Hace que la imagen no sea más grande que su tamaño original */
-    display: block;
-    /* Elimina el espacio adicional debajo de la imagen */
-    padding: 30px;
-    margin: 0 auto;
-    /* Centra la imagen horizontalmente */
+.d-flex {
+  margin: 40px;
+  padding-right: 40px;
 }
 
-/* Ubicación y horarios */
 .ubication {
-    display: flex;
-    background-color: #FFFFFF;
-    border-radius: 15px;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Para que los elementos se apilen en mobile */
+  padding: 20px; /* Ajuste de padding en mobile */
+}
+
+.ubication iframe {
+  width: 100%; /* Para que el iframe sea responsivo en pantallas pequeñas */
+  max-width: 600px; /* Máximo de 600px en móviles */
+  height: 450px;
+  border: 0;
+}
+
+#contact {
+  background-color: rgba(209, 212, 216, 0.1);
 }
 
 .text-ubication {
-    flex: 1;
-    max-width: 65%;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    /* Ajusta el padding según sea necesario */
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px; /* Ajuste de padding en mobile */
+  text-align: center; /* Centrar texto en mobile */
 }
 
 .days {
-    font-size: 6rem;
-    font-weight: 400;
-    color: #FFC564;
+  font-size: 5.5rem;
+  font-weight: 400;
+  color: #ffc564;
 }
 
 .text-ubication p strong {
+  font-weight: 400;
+}
+
+/* Botón */
+.btn-banner {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  background-color: #ffa100;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-banner:hover {
+  background-color: #e08900;
+  transform: scale(1.05);
+}
+
+/* Estilos del contenido */
+.padding {
+  /* display: flex; */
+  flex-wrap: wrap;
+  /* padding: 40px 80px ; */
+}
+
+.padding-grey {
+  display: flex;
+  background-color: rgba(209, 212, 216, 0.3);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.text {
+  /* flex: 1; */
+  padding: 110px;
+  max-width: 50%;
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: content-box;
+}
+
+.text p strong {
+  font-weight: 400;
+}
+
+.image {
+  /* flex: 1; */
+  display: flex;
+  justify-content: flex-end; /* Mueve la imagen al lado derecho */
+}
+
+.image img {
+  width: 85%;
+  height: auto;
+  display: block;
+}
+
+/* 📌 Introducción */
+#pastry-intro {
+  margin-top: 120px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  color: #333;
+}
+
+#pasteles h1,
+#galletas h1,
+#tartas h1,
+#especiales h1,
+#cupcakes h1,
+#panques h1 {
+    text-align: center;
+    font-size: 2.5rem;
     font-weight: 400;
-    /* Aplica negrita al texto dentro del párrafo */
+    color: #302e29; /* Color principal */
+    margin-bottom: 20px;
+    margin-top: 150px;
 }
 
-/* Nosotros */
-.padding-green {
-    display: flex;
-    /* flex-wrap: wrap;
-    Permite que los elementos se envuelvan si no caben en una sola fila */
-    background-color: rgb(72, 181, 166, 0.2);
-    margin: 0;
-    padding: 0;
-    position: relative;
-    /* Posiciona la imagen para superponer el texto */
-    overflow: hidden;
-    /* Evita que el contenido sobresalga del área del padding */
-    box-sizing: border-box;
-    align-items: center;
-}
-
-/* Faq */
-.accordion-button {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #503AB5;
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: #FFFFFF;
-    color: #503AB5;
-}
-
-.accordion-body {
-    font-weight: 300;
-}
-
-/* Facturación */
-.padding-grey-invoicing {
-    display: flex;
-    flex-wrap: wrap;
-    /* Permite que los elementos se envuelvan si no caben en una sola fila */
-    background-color: rgb(209, 212, 216, 0.3);
-    margin: 0;
-    padding: 100px;
-    position: relative;
-    /* Posiciona la imagen para superponer el texto */
-    overflow: hidden;
-    /* Evita que el contenido sobresalga del área del padding */
-    box-sizing: border-box;
-    align-items: center;
-}
-
-.text-invoicing {
-    flex: 1;
-    /* Hace que el contenedor de texto ocupe todo el espacio disponible */
-    padding: 0;
-    /* Ajusta el espaciado entre el texto y la imagen */
-    max-width: 50%;
-    /* Limita el ancho máximo del contenedor de texto para evitar que sea demasiado ancho */
-    position: absolute;
-    display: flex;
-    /* Activa el modelo de caja flexible */
-    justify-content: center;
-    /* Centra horizontalmente */
-    flex-direction: column;
-}
-
-.form-invoicing {
-    flex: 1;
-    /* Hace que el contenedor de imagen ocupe todo el espacio disponible */
-    max-width: 37%;
-    /* Limita el ancho máximo del contenedor de imagen para evitar que sea demasiado ancho */
-    margin-left: 63%;
-    /* Alinea la imagen a la derecha */
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    padding: 20px;
-    font-size: .9rem;
-    display: flex;
-    /* Activa el modelo de caja flexible */
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente */
-}
-
-form {
-    /* Mantiene la proporción de la imagen */
+#pasteles h1::after,
+#galletas h1::after,
+#tartas h1::after,
+#especiales h1::after,
+#cupcakes h1::after,
+#panques h1::after {
+    content: "";
     display: block;
-    /* Elimina el espacio adicional debajo de la imagen */
-    width: 28rem;
+    width: 80px;
+    height: 5px;
+    background-color: #ff671d; /* Color de tu branding */
+    margin: 10px auto;
+    border-radius: 2px;
+    margin-bottom: 60px;
 }
 
-.form {
-    border: none;
-    font-size: 1rem;
-    height: auto;
-    margin: 5px 0 0 0;
-    outline: solid 1px #FFA400;
-    border-radius: 5px;
-    padding: 10px;
+/* #pastry-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #6a5acd;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+} */
+
+#pastry-intro p {
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 85%;
+  color: #555;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.img-pastry {
+  width: 75%; /* En mobile */
+  padding-bottom: 20px;
+}
+
+/* 📌 Índice de navegación (Diseño Mobile First) */
+.index-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se acomoden en varias líneas */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 8px; /* Reduce el espacio entre los botones para mejor ajuste en móviles */
+    padding: 15px 10px; /* Ajusta el espacio interno */
+    margin: 15px auto; /* Centra el bloque */
+    max-width: 90%; /* Evita que ocupe toda la pantalla */
+    box-sizing: border-box;
+  }
+  
+  /* 📌 Botones del índice */
+  .index-list a {
+    display: inline-block;
+    padding: 12px 18px; /* Ajuste óptimo para touch en móviles */
+    font-size: 1rem; /* Tamaño adecuado para lectura */
+    font-weight: 500; /* Hace que el texto sea más visible */
+    color: #ffffff;
+    background-color: #ffa100;
+   /* Bordes más suaves */
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 140px; /* Ajuste para que sean más uniformes */
+    white-space: nowrap; /* Evita que el texto se divida */
+  }
+
+.index-list a:hover {
+  color: #ffffff;
+  background-color: #e08900;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Contenedor de tarjetas */
+.padding-cards {
+  padding: 0 40px 0 40px;
+  margin-bottom: 150px;
+}
+
+/* Configuración predeterminada: Automático basado en viewport */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* 📌 Estilos de las Cards */
+.card {
+  position: relative; /* Contenedor relativo para posicionar elementos absolutos */
+  flex-basis: calc(100% - 0px); /* 1 Card por fila en Mobile */
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* 📌 Imagen dentro de la tarjeta */
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* La imagen está detrás del label */
+}
+
+/* 📌 Información de la tarjeta (Inicialmente oculta, aparece fuera al hacer hover) */
+.card-info {
+    position: absolute;
+    bottom: -100%; /* Oculta la información fuera de la card */
+    left: 0;
     width: 100%;
-    background-color: rgb(255, 197, 100, 0.3);
-    color: #64696d;
-    margin-bottom: 30px;
-}
-
-input[type="submit"] {
-    outline: none;
-    border: none;
-    border-radius: 25px;
-    /* Redondea las esquinas */
-    padding: 10px 20px;
-    /* Ajusta el relleno según tus necesidades */
-    background-color: #FFA400;
-    /* Color de fondo normal */
+    background: rgba(0, 0, 0, 0.8);
     color: white;
-    /* Color de texto */
-    cursor: pointer;
-    /* Cambia el cursor al pasar sobre el botón */
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  /* 📌 Mostrar la información debajo al pasar el mouse */
+  .card:hover .card-info {
+    bottom: 0px; /* Ajusta según el tamaño de la info */
+    opacity: 1;
+  }
+  
+  /* 📌 Título dentro de la información */
+  .card-info h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  /* 📌 Texto dentro de la información */
+  .card-info p {
+    color: #ffffff;
+    font-size: .95rem;
+    font-weight: 300;
     margin: 0;
-}
+  }
 
-input[type="submit"]:hover {
-    background-color: #ff6600;
-    /* Cambia el color de fondo al pasar sobre el botón */
-}
-
-input[type="submit"]:active {
-    background-color: #ff6600;
-    /* Cambia el color de fondo al hacer clic en el botón */
-}
 
 /* FAQ */
 .accordion {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid rgba(209, 212, 216);
-    gap: 1rem;
-    padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(209, 212, 216);
+  gap: 1rem;
+  padding-bottom: 25px;
 }
 
 /* Aviso de Privacidad */
 .invoicing {
-    background-color: rgba(209, 212, 216, 0.2);
-    height: 400px;
+  background-color: rgba(209, 212, 216, 0.2);
+  height: 400px;
 }
 
 footer {
-    background-color: rgba(255, 103, 29, 0.8);
-    text-align: center;
-    /* Centra horizontalmente el contenido del footer */
+  background-color: rgba(255, 103, 29, 0.8);
+  text-align: center;
+  /* Centra horizontalmente el contenido del footer */
 }
 
 footer .privacy {
-    display: flex;
-    /* Activa el modelo de caja flexible */
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente */
-    background-color: #504D48;
-    color: #FFFFFF;
-    padding: 10px;
+  display: flex;
+  /* Activa el modelo de caja flexible */
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  background-color: #504d48;
+  color: #ffffff;
+  padding: 10px;
 }
 
 footer .footer-text {
-    margin-top: 1%;
-    color: #FFFFFF;
+  margin-top: 1%;
+  color: #ffffff;
 }
 
 footer a {
-    font-size: 1.2rem;
-    color: #FFFFFF;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 .privacy p {
-    font-size: 1rem;
-    margin: 2%;
+  font-size: 1rem;
+  margin: 2%;
 }
 
 footer img {
-    height: 80px;
+  height: 80px;
 }
 
 .social-media {
-    height: 17px;
-    padding: 0 .50rem;
-    margin-bottom: 3px;
+  height: 17px;
+  padding: 0 0.5rem;
+  margin-bottom: 3px;
 }
 
 .div-social-media {
-    padding: 4%;
+  padding: 4%;
 }
 
 .whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    background-color: #25d366;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 2.5rem;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+#btnScrollTop {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  display: none;
+  background-color: #3216ad; /* Color vibrante */
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#btnScrollTop:hover {
+  background-color: #1c0a6b; /* Color más oscuro */
+  transform: scale(1.1);
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Mantener el header fijo y con espacio */
+  header {
+    height: 70px; /* Un poco más alto para tablets */
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* Ajuste del logotipo para tablets */
+  header img {
+    width: 110px; /* Un poco más grande en tablet */
+    margin-left: 20px;
+  }
+
+  /* Mantener el botón hamburguesa visible */
+  .check-btn {
+    display: block;
+    font-size: 2.2rem; /* Un poco más grande en tablet */
+  }
+
+  /* Mantener el menú desplegable */
+  nav ul {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    background: #302e29;
+    padding: 20px;
+    transition: all 0.5s ease;
+    list-style: none;
+  }
+
+  /* Asegurar que el menú se muestra correctamente cuando se activa */
+  #check:checked + label + ul {
+    left: 0;
+  }
+
+  /* Ajuste del tamaño de los elementos del menú */
+  ul li {
+    margin: 15px 30px;
+  }
+
+  ul a {
+    font-size: 1.4rem; /* Un poco más grande en tablet */
+  }
+
+  /* Barra de búsqueda en tablet */
+  form.form-search {
+    gap: 10px;
+  }
+
+  form input[type="search"] {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+
+  .btn-search {
+    width: 42px;
+    height: 42px;
+    margin-left: -54px; /* Ajustar mejor el botón de búsqueda */
+  }
+
+  .btn-search i {
+    font-size: 1.3rem;
+  }
+
+  /* Índice */
+  .index-list {
+    gap: 12px; /* Espacio más amplio entre los botones */
+    /* max-width: 70%; */
+  }
+
+  .index-list a {
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    min-width: 160px;
+  }
+  
+}
+
+@media (min-width: 1024px) {
+  /* Oculta el botón hamburguesa en desktop */
+  .check-btn {
+    display: none;
+  }
+
+  /* Ajuste del header en desktop */
+  header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-decoration: none;
+    padding: 1rem 3rem; /* Más espacio en los lados */
+    height: 80px; /* Aumenta la altura */
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
+  }
+
+  /* Ajuste del logo */
+  header img {
+    width: 130px; /* Más grande en desktop */
+    height: auto;
+    object-fit: contain; /* Asegura que no se distorsione */
+  }
+
+  /* Alineación del menú */
+  header nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* Asegurar que los elementos del menú están alineados horizontalmente */
+  header nav ul {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    position: static;
+    background: transparent;
+    transition: all 0.5s ease;
+    margin: 0;
+  }
+
+  ul a {
+    color: #302e29;
+  }
+
+  /* Ajuste del input de búsqueda */
+  .form-search {
+    width: 250px; /* Más ancho en desktop */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-search input[type="search"] {
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: 2px solid #ffa100;
+    border-radius: 30px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+  }
+
+  /* Ajuste del botón de búsqueda */
+  .btn-search {
+    width: 34px;
+    height: 34px;
+    background-color: #ffa100;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 2.5rem;
-}
-
-
-
-
-/* Estilos para pantallas medianas (tablets) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-    /* Aquí van los estilos específicos para pantallas con un ancho entre 601px y 1024px */
-    header {
-        width: 100%;
-        height: 60px;
-        /* Ajusta la altura del encabezado */
-        position: fixed;
-        z-index: 1000;
-        /* Asegura que el encabezado esté por encima de todo */
-    }
-
-    header img {
-        width: 100px;
-        /* Ajusta el tamaño del logotipo para tablets */
-        margin-left: 15px;
-        /* Ajusta el margen izquierdo del logotipo */
-    }
-
-    header nav ul {
-        display: block;
-    }
-
-    .check-btn {
-        display: block;
-    }
-
-    ul {
-        position: absolute;
-        top: 60px;
-        /* Se pegará al borde superior del viewport */
-        width: 100%;
-        height: calc(61vh - 60px);
-        /* Altura de la pantalla menos la altura del encabezado */
-        background: #FFA400;
-        text-align: left;
-        top: 60px;
-        left: -100%;
-        transition: all .55s;
-        z-index: 999;
-        /* Asegura que el menú esté por encima del contenido */
-        overflow-y: visible;
-        /* Permite que el contenido se ajuste automáticamente */
-        padding-top: 20px;
-        /* Añade un poco de espacio en la parte superior del menú */
-        padding-bottom: 5px;
-    }
-
-    li {
-        display: block;
-        /* Hace que los elementos de la lista sean en bloque y no en línea */
-        margin-bottom: 20px;
-        /* Añade espacio entre elementos de lista */
-        margin-left: 25px;
-        font-size: 1.3rem;
-    }
-
-    a {
-        text-decoration: none;
-        /* Elimina el subrayado predeterminado de los enlaces */
-        color: #FFFFFF;
-        /* Color del texto del enlace */
-        font-weight: 400;
-        /* Peso de la fuente */
-    }
-
-    li a:hover,
-    li a.active {
-        background: none;
-        color: #FFFFFF;
-    }
-
-    /* Asegura que el menú se muestre cuando se active el botón de hamburguesa */
-    #check:checked~ul {
-        left: 0;
-        height: auto;
-    }
-
-    form.form-search {
-        justify-content: left;
-    }
-
-    form input[type="search"] {
-        padding: 5px;
-        border: none;
-        border-radius: 5px;
-        /* Redondea el borde */
-        outline: none;
-        /* Elimina el contorno al enfocar */
-        font-size: 1.1rem;
-        width: 100%;
-    }
-
-    .btn {
-        width: 40px;
-        /* Ajusta el ancho del botón */
-        height: 40px;
-    }
-
-    .btn i {
-        font-size: 1.2rem;
-        /* Ajusta el tamaño del ícono según tus necesidades */
-    }
-
-    /* Carrusel de imágenes */
-    h5 {
-        font-size: 1.85rem;
-    }
-
-    .btn-banner .fa {
-        margin-right: 5px;
-        /* Ajusta el espacio según tus necesidades */
-        font-size: .70rem;
-    }
-
-    .btn-banner {
-        font-size: .75rem;
-        padding: .50rem .75rem;
-        border-radius: 5px;
-    }
-
-    .p-banner {
-        font-size: 1rem;
-        font-weight: 300;
-    }
-
-    .text-center {
-        transform: translate(-50%, -20%) !important;
-    }
-
-    .padding,
-    .padding-grey,
-    .padding-green {
-        display: block;
-        margin: 0;
-        /* Posiciona la imagen para superponer el texto */
-        overflow: hidden;
-        /* Evita que el contenido sobresalga del área del padding */
-        box-sizing: border-box;
-        padding: 30px 50px;
-    }
-
-    .padding-grey-invoicing {
-        display: block;
-        padding: 100px 100px 50px 100px;
-    }
-
-    .text {
-        position: relative;
-        padding: 30px;
-        /* Ajusta el relleno del texto */
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de texto */
-        align-items: center;
-    }
-
-    .image {
-        max-width: 70%;
-        /* Ancho máximo para tablet */
-        margin: 0 auto;
-        /* Centra la imagen en tablet */
-        margin: 20px auto 0 auto;
-    }
-
-    .form-invoicing {
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de formulario */
-        margin: 0;
-    }
-
-    .text-invoicing {
-        position: relative;
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 8%;
-    }
-
-    .custom-link {
-        color: #302E29;
-    }
-
-    .text-ubication {
-        padding: 30px;
-        /* Ajusta el relleno del texto */
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de texto */
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .days {
-        font-size: 5.7rem;
-    }
-
-    .ubication {
-        width: 100%;
-    }
-
-    form {
-        display: block;
-        width: 100%;
-        /* Limita el ancho del formulario */
-        margin: 20px;
-    }
-}
-
-
-
-
-/* Estilos para pantallas más pequeñas (móviles) */
-@media only screen and (max-width: 600px) {
-    /* Aquí van los estilos específicos para pantallas con un ancho máximo de 600px */
-
-    /* Estilos para el encabezado */
-    header {
-        width: 100%;
-        height: 60px;
-        /* Ajusta la altura del encabezado */
-        position: fixed;
-        z-index: 1000;
-        /* Asegura que el encabezado esté por encima de todo */
-    }
-
-    header img {
-        width: 100px;
-        /* Ajusta el tamaño del logotipo para tablets */
-        margin-left: 15px;
-        /* Ajusta el margen izquierdo del logotipo */
-    }
-
-    header nav ul {
-        display: block;
-    }
-
-    .check-btn {
-        display: block;
-    }
-
-    /* Estilos para el menú desplegable */
-    ul {
-        position: absolute;
-        top: 60px;
-        /* Se pegará debajo del encabezado */
-        width: 100%;
-        height: calc(61vh - 60px);
-        /* Altura de la pantalla menos la altura del encabezado */
-        background: #FFA400;
-        text-align: left;
-        left: -100%;
-        transition: all .55s;
-        z-index: 999;
-        /* Asegura que el menú esté por encima del contenido */
-        overflow-y: visible;
-        /* Permite que el contenido se ajuste automáticamente */
-        padding-top: 20px;
-        /* Añade un poco de espacio en la parte superior del menú */
-        padding-bottom: 5px;
-    }
-
-    li {
-        display: block;
-        /* Hace que los elementos de la lista sean en bloque y no en línea */
-        margin-bottom: 20px;
-        /* Añade espacio entre elementos de lista */
-        margin-left: 25px;
-        font-size: 1.3rem;
-    }
-
-    a {
-        text-decoration: none;
-        /* Elimina el subrayado predeterminado de los enlaces */
-        color: #FFFFFF;
-        /* Color del texto del enlace */
-        font-weight: 400;
-        /* Peso de la fuente */
-    }
-
-    li a:hover,
-    li a.active {
-        background: none;
-        color: #FFFFFF;
-    }
-
-    /* Asegura que el menú se muestre cuando se active el botón de hamburguesa */
-    #check:checked~ul {
-        left: 0;
-        height: auto;
-    }
-
-    /* Estilos para el formulario de búsqueda */
-    form.form-search {
-        justify-content: left;
-    }
-
-    form input[type="search"] {
-        padding: 5px;
-        border: none;
-        border-radius: 5px;
-        /* Redondea el borde */
-        outline: none;
-        /* Elimina el contorno al enfocar */
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    /* Estilos para el botón */
-    .btn {
-        width: 35px;
-        /* Ajusta el ancho del botón */
-        height: 35px;
-    }
-
-    .btn i {
-        font-size: 1.2rem;
-        /* Ajusta el tamaño del ícono según tus necesidades */
-    }
-
-    /* Carrusel de imágenes */
-    h5 {
-        font-size: 1rem;
-    }
-
-    .btn-banner .fa {
-        margin-right: 5px;
-        /* Ajusta el espacio según tus necesidades */
-        font-size: .70rem;
-    }
-
-    .btn-banner {
-        font-size: .75rem;
-        padding: .50rem .75rem;
-        border-radius: 50px;
-    }
-
-    .p-banner {
-        font-size: 1rem;
-        font-weight: 300;
-    }
-
-    .text-center {
-        transform: translate(-50%, -20%) !important;
-    }
-
-    .banner {
-        height: 15rem;
-        width: auto;
-        align-items: center;
-        /* Centra verticalmente los elementos */
-    }
-
-    .banner img {
-        width: auto;
-    }
-
-    .carousel-indicators {
-        position: unset;
-    }
-
-    /* Flechas de navegación */
-    .carousel-control-prev,
-    .carousel-control-next {
-        top: 60%;
-        transform: translateY(-50%);
-        width: 30px;
-        height: 30px;
-        padding: 5px;
-    }
-
-    .padding,
-    .padding-grey,
-    .padding-green {
-        display: block;
-        /* Ajusta el relleno general */
-        margin: 0;
-        /* Posiciona la imagen para superponer el texto */
-        overflow: hidden;
-        /* Evita que el contenido sobresalga del área del padding */
-        box-sizing: border-box;
-        padding: 30px 50px;
-    }
-
-    .padding-grey-invoicing {
-        display: block;
-        padding: 100px 30px 50px 30px;
-    }
-
-    .text {
-        position: relative;
-        padding: 10px;
-        /* Ajusta el relleno del texto */
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de texto */
-        align-items: center;
-    }
-
-    .image {
-        max-width: 100%;
-        /* Ancho máximo para tablet */
-        margin: 0 auto;
-        /* Centra la imagen en tablet */
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .form-invoicing {
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de formulario */
-        margin: 0;
-    }
-
-    .text-invoicing {
-        position: relative;
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        margin-bottom: 9%;
-    }
-
-    .custom-link {
-        color: #302E29;
-    }
-
-    .text-ubication {
-        padding: 10px;
-        /* Ajusta el relleno del texto */
-        max-width: 100%;
-        /* Limita el ancho máximo del contenedor de texto */
-        align-items: center;
-        text-align: center;
-    }
-
-    .days {
-        font-size: 3.2rem;
-    }
-
-    .ubication {
-        width: 100%;
-    }
-
-    form {
-        display: block;
-        width: 100%;
-        /* Limita el ancho del formulario */
-        margin: 20px;
-    }
-
-    footer .footer-text {
-        margin-top: 1%;
-        color: #FFFFFF;
-    }
-
-    footer a {
-        /* link texto redes sociales */
-        font-size: 1rem;
-        color: #FFFFFF;
-    }
-
-    .privacy p {
-        font-size: .8rem;
-        margin: 2%;
-    }
-
-    footer img {
-        height: 60px;
-    }
-
-    .social-media {
-        height: 24px;
-    }
-}
-
-
-
-
-/* Media query para pantallas entre 1236px y 1164px */
-@media screen and (max-width: 1236px) and (min-width: 1164px) {
-    .text {
-        max-width: 50%;
-        padding-right: 20px;
-    }
-
-    p {
-        font-weight: 300;
-        font-size: 1.1rem;
-    }
-}
-
-
-
-/* Media query para pantallas entre 1164px y 1026px */
-@media screen and (max-width: 1164px) and (min-width: 1026px) {
-    p {
-        font-weight: 300;
-        font-size: 1rem;
-    }
-
-    /* Flechas de navegación */
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 60px;
-        height: 60px;
-    }
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: -48px;
+  }
+
+  .btn-search:hover {
+    background-color: #e08900;
+    transform: scale(1.05);
+  }
+
+  .btn-search i {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 1.4rem; /* 19.2px */
+    line-height: 1.8; /* Mayor legibilidad */
+    color: #333; /* Un tono más oscuro para mejor contraste */
+  }
+
+  .d-flex {
+    padding-right: 0;
+    padding-left: 60px;
+  }
+
+  #pastry-intro p {
+    max-width: 65%;
+  }
+
+  /* CARDS */
+  .cards-container {
+    gap: 50px;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* 3 columnas */
+  }
+
+  .img-pastry {
+    width: 50%; /* En mobile, será más grande */
+  }
+
+  /* Índice */
+  .index-list {
+    max-width: 70%; /* Reduce el ancho máximo en pantallas grandes */
+    gap: 15px;
+  }
+
+  .index-list a {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    min-width: 180px;
+  }
+
+   /* Ubication */
+   .days {
+    font-size: 5.5rem;
+  }
+
+  .ubication {
+    display: flex;
+    flex-direction: row; /* En desktop los elementos estarán en línea */
+    border-radius: 15px;
+    align-items: center;
+    padding-left: 100px;
+  }
+
+  .ubication iframe {
+    max-width: 850px;
+  }
+
+  .text-ubication {
+    max-width: 65%;
+    padding: 50px 0 50px 100px;
+    text-align: left; /* Volver a alinear el texto a la izquierda en desktop */
+  }
+
+  /* Nosotros */
+  .padding-green {
+    display: flex;
+    background-color: rgba(72, 181, 166, 0.2);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    align-items: center;
+  }
 }

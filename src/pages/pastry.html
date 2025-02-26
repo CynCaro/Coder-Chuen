@@ -19,71 +19,138 @@
 <body>
     <header>
         <a href="../index.html">
-            <img src="../img/logotipo-chuen-color.svg" alt="logotipo-chuen-color">
+          <img src="../img/logotipo-chuen-color.svg" alt="logotipo-chuen-color" />
         </a>
         <nav>
-            <input type="checkbox" id="check">
-            <ul>
-                <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                <li><a href="../pages/pastry.html">Pastry</a></li>
-                <li><a href="../pages/faq.html">FAQ Preguntas y Respuestas</a></li>
-                <li><a href="../index.html">Contacto</a></li>
-                <li><a href="../pages/facturacion.html">Facturación</a></li>
-                <li>
-                    <form class="form-search" action="">
-                        <input type="search" placeholder="Buscar" required>
-                        <div class="btn">
-                            <i class="fa-solid fa-magnifying-glass fa-2xs"></i>
-                        </div>
-                    </form>
-                </li>
-            </ul>
-            <label for="check" class="check-btn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
+          <input type="checkbox" id="check" />
+          <label for="check" class="check-btn">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <!-- Menú -->
+          <ul>
+            <li><a href="../pages/nosotros.html">Nosotros</a></li>
+            <li><a href="../pages/pastry.html">Pastry</a></li>
+            <li><a href="../pages/faq.html">FAQ</a></li>
+            <li><a href="../index.html#contact">Contacto</a></li>
+            <li><a href="../pages/facturacion.html">Facturación</a></li>
+            <!-- Barra de búsqueda -->
+            <li>
+              <form class="form-search" action="">
+                <input type="search" placeholder="Buscar" />
+                <button class="btn-search">
+                  <i class="fa-solid fa-magnifying-glass fa-2xs"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <main>
         <!-- Carrusel de imágenes -->
         <section class="banner">
-            <img src="../img/banner5.jpg" alt="portada galletas quinoa">
+            <img src="../img/pastry.webp" alt="Portada galletas pastisetas">
             <div class="custom-div">
-                <img src="../img/texto-pastry.png" alt="texto pastry" </div>
+                <img src="../img/texto-pastry.png" alt="Imagen de portada con el texto 'Pastry' en el centro">
+            </div>
         </section>
-        <section class="padding">
-            <h1>Pasteles</h1>
-            <!-- Galería de imágenes -->
-        </section>
-        <section class="padding">
-            <h1>Galletas</h1>
-            <!-- Galería de imágenes -->
-        </section>
-        <section class="padding">
-            <h1>Especiales</h1>
-            <!-- Galería de imágenes -->
-        </section>
-    </main>
 
-    <footer>
-        <div class="div-social-media">
-            <img src="../img/hashtag-chuen.png" alt="logotipo marca">
-            <p class="footer-text">CDMX, Teniente Fausto Vega Santander, Col. Escuadrón 201</p>
-            <img class="social-media" src="../img/f.png" alt="logotipo facebook">
-            <a href="https://www.facebook.com/ChuenCreando/">ChuenCreando</a>
-            <img class="social-media" src="../img/ig.png" alt="logotipo instagram">
-            <a href="https://www.instagram.com/chuen.creando.sensaciones/">Chuen.Creando.Sensaciones</a>
-        </div>
-        <section class="privacy">
-            <p>2024 ® Chuen.com.mx Todos los derechos reservados.
-                <br>
-                Aviso de Privacidad
+        <section id="pastry-intro" class="text-center">
+            <img
+              src="../img/descubre-nuestras-creaciones.png"
+              alt="Descubre nuestras creaciones"
+              class="img-fluid img-pastry mx-auto d-block"
+            />
+            <!-- <h2>Descubre nuestras creaciones</h2> -->
+            <p>
+                Bienvenidos a nuestro mundo de repostería artesanal gourmet. Aquí encontrarás pasteles, galletas,
+                tartas, y más, preparados con amor y los mejores ingredientes. <strong>Explora nuestras creaciones y elige la
+                    que endulzará tus momentos especiales.</strong>
             </p>
         </section>
-    </footer>
+        
+        <!-- 📌 Índice de navegación -->
+        <div id="pastry-index" class="text-center">
+            <div class="index-list">
+                <a href="#pasteles">Pasteles</a>
+                <a href="#galletas">Galletas</a>
+                <a href="#tartas">Tartas</a>
+                <a href="#especiales">Especiales</a>
+                <a href="#cupcakes">Cupcakes</a>
+                <a href="#panques">Panqués</a>
+            </div>
+        </div>        
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Sección: Pasteles -->
+        <section class="padding-cards" id="pasteles">
+            <h1>Pasteles</h1>
+            <div id="pasteles-container" class="cards-container"></div>
+        </section>
+
+        <!-- Sección: Galletas -->
+        <section class="padding-cards" id="galletas">
+            <h1>Galletas</h1>
+            <div id="galletas-container" class="cards-container"></div>
+        </section>
+
+        <!-- Sección: Tartas -->
+        <section class="padding-cards" id="tartas">
+            <h1>Tartas</h1>
+            <div id="tartas-container" class="cards-container"></div>
+        </section>
+
+        <!-- Sección: Especiales -->
+        <section class="padding-cards" id="especiales">
+            <h1>Especiales</h1>
+            <div id="especiales-container" class="cards-container"></div>
+        </section>
+
+        <!-- Sección: Cupcakes -->
+        <section class="padding-cards" id="cupcakes">
+            <h1>Cupcakes</h1>
+            <div id="cupcakes-container" class="cards-container"></div>
+        </section>
+
+        <!-- Sección: Panqués -->
+        <section class="padding-cards" id="panques">
+            <h1>Panqués</h1>
+            <div id="panques-container" class="cards-container"></div>
+        </section>
+
+
+        <footer>
+            <div class="div-social-media">
+                <img src="../img/hashtag-chuen.png" alt="logotipo marca">
+                <p class="footer-text">CDMX, Teniente Fausto Vega Santander, Col. Escuadrón 201</p>
+                <img class="social-media" src="../img/f.png" alt="logotipo facebook">
+                <a href="https://www.facebook.com/ChuenCreando/">ChuenCreando</a>
+                <img class="social-media" src="../img/ig.png" alt="logotipo instagram">
+                <a href="https://www.instagram.com/chuen.creando.sensaciones/">Chuen.Creando.Sensaciones</a>
+            </div>
+            <section class="privacy">
+                <p>2024 ® Chuen.com.mx Todos los derechos reservados.
+                    <br>
+                    Aviso de Privacidad
+                </p>
+            </section>
+        </footer>
+
+         <!-- Botón flotante de WhatsApp -->
+    <a
+    class="whatsapp-btn"
+    href="https://wa.me/525621774211?text=¡Hola!%20Quisiera%20hacer%20un%20pedido%20por%20favor%20"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+        <!-- Botón de volver arriba -->
+<button id="btnScrollTop" class="btn btn-primary">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+        <script type="module" src="../js/main.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
