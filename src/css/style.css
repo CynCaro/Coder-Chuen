@@ -314,7 +314,6 @@ form input[type="search"] {
 }
 
 .padding-grey {
-  display: flex;
   background-color: rgba(209, 212, 216, 0.3);
   margin: 0;
   padding: 0;
@@ -326,8 +325,8 @@ form input[type="search"] {
 
 .text {
   /* flex: 1; */
-  padding: 110px;
-  max-width: 50%;
+  padding: 50px;
+  max-width: 80%;
   /* position: absolute; */
   display: flex;
   justify-content: center;
@@ -346,9 +345,11 @@ form input[type="search"] {
 }
 
 .image img {
-  width: 85%;
+  width: 95%;
   height: auto;
   display: block;
+  margin: 0 auto;
+  padding-bottom: 110px;
 }
 
 /* 📌 Introducción */
@@ -527,6 +528,16 @@ form input[type="search"] {
     margin: 0;
   }
 
+  /* Nosotros */
+  .padding-green {
+    background-color: rgba(72, 181, 166, 0.2);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    align-items: center;
+  }
 
 /* FAQ */
 .accordion {
@@ -534,7 +545,29 @@ form input[type="search"] {
   flex-direction: column;
   border-bottom: 1px solid rgba(209, 212, 216);
   gap: 1rem;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+/* Cambiar color del texto del encabezado del acordeón */
+.accordion-button {
+  color: #503ab5;
+  font-size: 1.3rem;
+}
+
+/* Quitar el color de fondo azul al hacer clic (estado activo) */
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+  color: #503ab5;
+}
+
+.accordion-item {
+  padding-bottom: 15px;
+}
+
+.accordion-body p, .accordion-body ul {
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 /* Aviso de Privacidad */
@@ -701,6 +734,19 @@ footer img {
     font-size: 1.3rem;
   }
 
+  .text {
+    padding: 110px;
+  }
+
+  .image {
+    justify-content: center;
+  }
+
+  .image img {
+    width: 75%;
+    padding-right: 0;
+  }
+
   /* Índice */
   .index-list {
     gap: 12px; /* Espacio más amplio entre los botones */
@@ -804,8 +850,8 @@ footer img {
   }
 
   p {
-    font-size: 1.4rem; /* 19.2px */
-    line-height: 1.8; /* Mayor legibilidad */
+    font-size: 1.2rem; /* 19.2px */
+    line-height: 1.6; /* Mayor legibilidad */
     color: #333; /* Un tono más oscuro para mejor contraste */
   }
 
@@ -829,9 +875,19 @@ footer img {
     width: 50%; /* En mobile, será más grande */
   }
 
+  .text {
+    padding: 110px;
+    max-width: 45%
+  }
+
+  .image img {
+    padding-right: 100px;
+  }
+
   /* Índice */
   .index-list {
-    max-width: 70%; /* Reduce el ancho máximo en pantallas grandes */
+    /* max-width: 70%;  */
+    /* Reduce el ancho máximo en pantallas grandes */
     gap: 15px;
   }
 
@@ -855,7 +911,7 @@ footer img {
   }
 
   .ubication iframe {
-    max-width: 850px;
+    max-width: 700px;
   }
 
   .text-ubication {
@@ -864,15 +920,12 @@ footer img {
     text-align: left; /* Volver a alinear el texto a la izquierda en desktop */
   }
 
+  .padding-grey {
+    display: flex;
+  }
+
   /* Nosotros */
   .padding-green {
     display: flex;
-    background-color: rgba(72, 181, 166, 0.2);
-    margin: 0;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    align-items: center;
   }
 }

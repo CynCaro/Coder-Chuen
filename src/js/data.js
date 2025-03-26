@@ -24,17 +24,17 @@ export const productos = {
         { nombre: "Royal Icing", alergenos_comunes: "sin gluten, lácteos", otros_ingredientes: "cacahuate, mantequilla", imagen: "../img/royalicing.webp" },
     ],
     tartas: [
-        { nombre: "Tarta de mango", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, mango, mantequilla", imagen: "../img/mango.jpg" },
+        { nombre: "Tarta de mango", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, mango, mantequilla", imagen: "../img/tarta-mango.webp" },
         { nombre: "Tarta de blueberry", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, blueberry, mantequilla", imagen: "../img/tarta-blueberry.webp" },
-        { nombre: "Tarta de frutos", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, frutos mixtos, mantequilla", imagen: "../img/tarta-frutos.jpg" },
+        { nombre: "Tarta de frutos", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, frutos mixtos, mantequilla", imagen: "../img/tarta-frutos.webp" },
         { nombre: "Tarta de calabaza", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, calabaza, mantequilla", imagen: "../img/tarta-calabaza.webp" },
         { nombre: "Tarta de higo", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, higo, mantequilla", imagen: "../img/tarta-higo.webp" },
-        { nombre: "Tarta de limón", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, limón, mantequilla", imagen: "../img/tarta-limon.jpg" },
+        { nombre: "Tarta de limón", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, limón, mantequilla", imagen: "../img/tarta-limon.webp" },
         { nombre: "Tarta de frutos rojos", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, frutos rojos, mantequilla", imagen: "../img/tarta-frutos-rojos.webp" },
-        { nombre: "Tarta de zarzamora", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, zarzamora, mantequilla", imagen: "../img/tarta-zarzamora.jpg" },
+        { nombre: "Tarta de manzana", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, zarzamora, mantequilla", imagen: "../img/tarta-manzana.webp" },
         { nombre: "Tarta de maracuyá", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, maracuyá, mantequilla", imagen: "../img/tarta-maracuya.webp" },
         { nombre: "Tarta de chocolate", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "harina, chocolate, mantequilla", imagen: "../img/tarta-chocolate.webp" },
-        { nombre: "Tarta de avellana", alergenos_comunes: "gluten, lácteos, frutos secos", otros_ingredientes: "harina, avellana, mantequilla", imagen: "../img/tarta-avellana.jpg" },
+        { nombre: "Tarta de avellana", alergenos_comunes: "gluten, lácteos, frutos secos", otros_ingredientes: "harina, avellana, mantequilla", imagen: "../img/tarta-avellana.webp" },
         { nombre: "Tarta de frambuesas", alergenos_comunes: "gluten, lácteos, frutos secos", otros_ingredientes: "harina, avellana, mantequilla", imagen: "../img/tarta-frambuesas.webp" },
     ],
     especiales: [
@@ -66,7 +66,7 @@ cupcakes: [
 ],
 
 panques: [
-    { nombre: "Pan de elote", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "Harina, Elote, Mantequilla", imagen: "../img/p-elote.jpg" },
+    { nombre: "Pan de elote", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "Harina, Elote, Mantequilla", imagen: "../img/p-elote.webp" },
     { nombre: "Panqué de calabaza", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "Harina, Calabaza, Mantequilla", imagen: "../img/p-calabaza.webp" },
     { nombre: "Panqué de plátano", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "Harina, Plátano, Mantequilla", imagen: "../img/p-platano.webp" },
     { nombre: "Panqué de limón amarillo", alergenos_comunes: "gluten, lácteos", otros_ingredientes: "Harina, Limón Amarillo, Mantequilla", imagen: "../img/p-limon.webp" },
