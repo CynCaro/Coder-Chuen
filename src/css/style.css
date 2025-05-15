@@ -175,7 +175,7 @@ form input[type="search"] {
 /* Estilo botón cerrar */
 .btn-clear {
   position: absolute;
-  right: 65px; /* ajusta si tu lupa se mueve */
+  right: 95px; /* ajusta si tu lupa se mueve */
   background: transparent;
   border: none;
   font-size: 1.1rem;
@@ -848,6 +848,11 @@ footer img {
     font-size: 1.4rem; /* Un poco más grande en tablet */
   }
 
+  /* Estilo botón cerrar */
+  .btn-clear {
+  right: 55px; /* ajusta si tu lupa se mueve */
+  }
+
   .banner {
     height: 400px;
   }
@@ -1003,6 +1008,11 @@ footer img {
     font-size: 1.2rem;
     color: #ffffff;
   }
+
+  /* Estilo botón cerrar */
+  .btn-clear {
+    right: 135px; /* ajusta si tu lupa se mueve */
+    }
 
   p {
     font-size: 1.2rem; /* 19.2px */

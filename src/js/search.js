@@ -38,8 +38,14 @@ if (input) {
         totalResultados += resultados.length;
         seccion.style.display = 'block';
         renderProductos(categoria, resultados);
+
+        if (totalResultados === resultados.length) {
+          seccion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
       } else if (valor) {
         seccion.style.display = 'none';
+
       } else {
         seccion.style.display = 'block';
         renderProductos(categoria);
@@ -49,13 +55,12 @@ if (input) {
     mensajeSinResultados.style.display = valor && totalResultados === 0 ? 'block' : 'none';
   });
 
-  // Botón ❌ para limpiar búsqueda
+  // ✅ Mueve aquí el botón limpiar y escape
   btnClear.addEventListener('click', () => {
     input.value = '';
     input.dispatchEvent(new Event('input'));
   });
 
-  // (opcional) Limpiar con tecla Esc
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       input.value = '';
