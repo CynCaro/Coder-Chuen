@@ -47,7 +47,7 @@
 
 <main>
     <!-- Carrusel de imágenes -->
-    <section class="padding-grey-invoicing">
+    <!-- <section class="padding-grey-invoicing">
         <div class="text-invoicing">
             <h2>Facturación</h2>
             <h1>Electrónica</h1>
@@ -103,24 +103,104 @@
                 <input class="form" type="submit" value="Enviar">
             </form>
         </div>
-    </section>
+    </section> -->
+    <section class="padding-grey-invoicing">
+        <div class="container py-5">
+          <div class="row align-items-center g-5">
+            <div class="col-md-7 text-invoicing">
+              <!-- Texto aquí -->
+              <h2>Facturación</h2>
+              <h1>Electrónica</h1>
+              <p>A partir del 01 de septiembre de 2022, nuestro sistema de facturación se actualizó a la nueva versión 4.0
+                  de conformidad con las nuevas disposiciones fiscales relacionadas con comprobantes fiscales publicadas
+                  por
+                  el SAT, por lo tanto, es requerido que nuestros clientes validen que sus datos fiscales que son
+                  obligatorios, se capturen conforme a su constancia de situación fiscal.
+              </p>
+              <p>Los datos fiscales obligatorios que serán validados por el SAT,
+                  además del RFC son los siguientes:
+                  <strong>RAZON SOCIAL SIN INCLUIR RÉGIMEN DE CAPITAL, CÓDIGO POSTAL, RÉGIMEN FISCAL y USO DE FACTURA,
+                      a continuación los campos en los que se deben capturar:</strong>
+              </p>
+              <p> Considerar que si los datos capturados no coinciden con la información señalada en su constancia de
+                  situación fiscal actualizada o reciente, el SAT no permitirá emitir el CFDI.
+                  Adicionalmente, usted podrá descargar y consultar sus datos fiscales directamente de la página del SAT
+                  ingresando con su RFC y contraseña o firma electrónica, en la opción “Genera tu constancia de Situación
+                  Fiscal”: <a href="https://www.sat.gob.mx/aplicacion/53027/genera-tu-constancia-de-situacion-fiscal"
+                      class="custom-link">Dando click
+                      Aquí</a></p>
+              <p>Cualquier duda o apoyo enviar los datos al correo <a href="mailto:chuencreando@gmail.com"
+                      class="custom-link">chuencreando@gmail.com</a></p>
+            </div>
+            <div class="col-md-5 form-invoicing">
+              <!-- Formulario aquí -->
+              <form action="" method="post">
+                <label for="nombre"></label>
+                <input class="form" type="text" id="nombre" name="nombre" placeholder="Nombre completo" required><br>
+
+                <label for="razon_social"></label>
+                <input class="form" type="text" id="razon_social" name="razon_social" placeholder="Razón Social"
+                    required><br>
+
+                <label for="direccion"></label>
+                <input class="form" type="text" id="direccion" name="direccion" placeholder="Dirección" required><br>
+
+                <label for="codigo_postal"></label>
+                <input class="form" type="text" id="codigo_postal" name="codigo_postal" placeholder="Código Postal"
+                    required><br>
+
+                <label for="regimen_fiscal"></label>
+                <input class="form" type="text" id="regimen_fiscal" name="regimen_fiscal" placeholder="Régimen Fiscal"
+                    required><br>
+
+                <label for="uso_facturacion"></label>
+                <input class="form" type="text" id="uso_facturacion" name="uso_facturacion"
+                    placeholder="Uso de Facturación" required><br>
+
+                <label for="correo_electronico"></label>
+                <input class="form" type="email" id="correo_electronico" name="correo_electronico"
+                    placeholder="Correo electrónico" required><br>
+
+                <input class="form" type="submit" value="Enviar">
+            </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 </main>
-<footer>
-    <div class="div-social-media">
-        <img src="../img/hashtag-chuen.png" alt="logotipo marca">
-        <p class="footer-text">CDMX, Teniente Fausto Vega Santander, Col. Escuadrón 201</p>
-        <img class="social-media" src="../img/f.png" alt="logotipo facebook">
-        <a href="https://www.facebook.com/ChuenCreando/">ChuenCreando</a>
-        <img class="social-media" src="../img/ig.png" alt="logotipo instagram">
-        <a href="https://www.instagram.com/chuen.creando.sensaciones/">Chuen.Creando.Sensaciones</a>
+
+<footer class="bg-orange-strong text-white text-center py-5">
+    <div class="container">
+      <img src="../img/hashtag-chuen.png" alt="Logotipo Chuen" class="mb-4" style="max-width: 180px;" />
+  
+      <p class="mb-2 fw-semibold">
+        CDMX, Teniente Fausto Vega Santander,<br />
+        Col. Escuadrón 201
+      </p>
+  
+      <p class="mb-4">Síguenos para descubrir sabores que despiertan emociones</p>
+  
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-2 mb-2">
+        <a href="https://www.facebook.com/ChuenCreando/" class="d-flex align-items-center text-white text-decoration-none" target="_blank">
+          <i class="fab fa-facebook fa-lg me-1"></i> ChuenCreando
+        </a>
+        <span class="text-white-50">|</span>
+        <a href="https://www.instagram.com/chuen.creando.sensaciones/" class="d-flex align-items-center text-white text-decoration-none" target="_blank">
+          <i class="fab fa-instagram fa-lg me-1"></i> @chuen.creando.sensaciones
+        </a>
+      </div>
     </div>
-    <section class="privacy">
-        <p>2024 ® Chuen.com.mx Todos los derechos reservados.
-            <br>
-            Aviso de Privacidad
-        </p>
-    </section>
-</footer>
+  </footer>
+  
+  <!-- Aviso de privacidad sin fondo naranja adicional -->
+  <div class="footer-legal-full text-white text-center py-3">
+    <small>
+      2025 ® Chuen.com.mx Todos los derechos reservados.
+      <span class="px-2">|</span>
+      <a href="#" class="text-white text-decoration-underline">Aviso de Privacidad</a>
+    </small>
+  </div>
 
  <!-- Botón flotante de WhatsApp -->
  <a

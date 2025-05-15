@@ -26,7 +26,7 @@ p {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5;
-  color: #555;
+  color: #333;
 }
 
 nav {
@@ -172,6 +172,32 @@ form input[type="search"] {
   color: #ffffff;
 }
 
+/* Estilo botón cerrar */
+.btn-clear {
+  position: absolute;
+  right: 65px; /* ajusta si tu lupa se mueve */
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  color: #999;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-clear:hover {
+  color: #ff6600;
+}
+
+
+.cards-container .card {
+  animation: aparecer 0.3s ease-in-out;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Carrusel de imágenes */
 .btn-banner .fa {
   margin-right: 5px;
@@ -181,24 +207,28 @@ form input[type="search"] {
 .banner {
   background-size: cover;
   object-fit: cover;
-  height: 60%;
   max-width: 100%;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
+  height: 250px;
 }
 
 .carousel {
   position: static !important;
 }
 
+.carousel-indicators {
+  margin-bottom: 2.5rem;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   padding: 5px;
   border-radius: 50%;
   opacity: initial;
@@ -245,8 +275,8 @@ form input[type="search"] {
   z-index: 1;
 }
 
-.d-flex {
-  margin: 40px;
+.custom-flex-spacing {
+  margin: 10px 40px;
   padding-right: 40px;
 }
 
@@ -288,6 +318,7 @@ form input[type="search"] {
 
 /* Botón */
 .btn-banner {
+  text-decoration: none; /* Quita el subrayado */
   display: inline-block;
   padding: 0.75rem 2rem;
   border-radius: 30px;
@@ -354,7 +385,7 @@ form input[type="search"] {
 
 /* 📌 Introducción */
 #pastry-intro {
-  margin-top: 120px;
+  margin-top: 40px;
   margin-bottom: 40px;
   padding: 0 20px;
   text-align: center;
@@ -374,7 +405,7 @@ form input[type="search"] {
     font-weight: 400;
     color: #302e29; /* Color principal */
     margin-bottom: 20px;
-    margin-top: 150px;
+    margin-top: 40px;
 }
 
 #pasteles h1::after,
@@ -406,7 +437,7 @@ form input[type="search"] {
   line-height: 1.6;
   margin: 0 auto;
   max-width: 85%;
-  color: #555;
+  color: #333;
   text-align: center;
   word-wrap: break-word;
 }
@@ -451,10 +482,23 @@ form input[type="search"] {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.sin-resultados {
+  font-size: 2.1rem;
+  color: #555;
+  font-weight: 400;
+  animation: fadeIn 0.3s ease;
+  padding: 60px 50px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* 📌 Contenedor de tarjetas */
 .padding-cards {
   padding: 0 40px 0 40px;
-  margin-bottom: 150px;
+  margin-bottom: 20px;
 }
 
 /* Configuración predeterminada: Automático basado en viewport */
@@ -528,6 +572,17 @@ form input[type="search"] {
     margin: 0;
   }
 
+  section.padding-cards {
+    transition: opacity 0.3s ease;
+  }
+  section.padding-cards[style*="display: none"] {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }  
+
   /* Nosotros */
   .padding-green {
     background-color: rgba(72, 181, 166, 0.2);
@@ -570,7 +625,67 @@ form input[type="search"] {
   font-weight: 400;
 }
 
-/* Aviso de Privacidad */
+.accordion-body img {
+  display: block;
+  margin: 0 auto;
+}
+/* FACTURACIÓN ELECTRÓNICA */
+
+/* Fondo gris suave y espaciado */
+.padding-grey-invoicing {
+  background-color: rgba(209, 212, 216, 0.3);
+}
+
+.text-invoicing {
+  padding: 60px 40px 0 40px;
+
+}
+
+.text-invoicing a.custom-link {
+  color: #f87b4c;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.text-invoicing a.custom-link:hover {
+  color: #c9582b;
+}
+
+/* Formulario */
+.form-invoicing form {
+  background-color: #fff;
+  padding: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+/* inputs */
+.form-invoicing .form {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+}
+
+.form-invoicing input[type="submit"] {
+  background-color: #f87b4c;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-invoicing input[type="submit"]:hover {
+  background-color: #e26a3a;
+}
+
+/* Aviso de Privacidad 
 .invoicing {
   background-color: rgba(209, 212, 216, 0.2);
   height: 400px;
@@ -579,16 +694,16 @@ form input[type="search"] {
 footer {
   background-color: rgba(255, 103, 29, 0.8);
   text-align: center;
-  /* Centra horizontalmente el contenido del footer */
+  /* Centra horizontalmente el contenido del footer 
 }
 
 footer .privacy {
   display: flex;
-  /* Activa el modelo de caja flexible */
+  /* Activa el modelo de caja flexible 
   justify-content: center;
-  /* Centra horizontalmente */
+  /* Centra horizontalmente 
   align-items: center;
-  /* Centra verticalmente */
+  /* Centra verticalmente 
   background-color: #504d48;
   color: #ffffff;
   padding: 10px;
@@ -621,6 +736,21 @@ footer img {
 
 .div-social-media {
   padding: 4%;
+} */
+
+/* FOOTTER */
+.bg-orange-strong {
+  background-color: rgba(255, 103, 29, 0.8);
+}
+
+.footer-legal-full {
+  width: 100%;
+  background-color: #504d48;
+  font-size: 0.95rem;
+}
+
+.footer-legal-full a:hover {
+  opacity: 0.85;
 }
 
 .whatsapp-btn {
@@ -669,6 +799,10 @@ footer img {
   transform: scale(1.1);
 }
 
+#btnScrollTop.show {
+  display: block;
+}
+
 
 @media (min-width: 601px) and (max-width: 1024px) {
   /* Mantener el header fijo y con espacio */
@@ -714,8 +848,24 @@ footer img {
     font-size: 1.4rem; /* Un poco más grande en tablet */
   }
 
+  .banner {
+    height: 400px;
+  }
+
+  .carousel-indicators {
+    margin-bottom: 5rem;
+  }
+
+  .carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  width: 50px;
+  height: 50px;
+}
+
   /* Barra de búsqueda en tablet */
   form.form-search {
+    position: relative;
     gap: 10px;
   }
 
@@ -744,6 +894,11 @@ footer img {
 
   .image img {
     width: 75%;
+    padding-right: 0;
+  }
+
+  .custom-flex-spacing {
+    margin: 10px 0 10px 40px;
     padding-right: 0;
   }
 
@@ -855,7 +1010,22 @@ footer img {
     color: #333; /* Un tono más oscuro para mejor contraste */
   }
 
-  .d-flex {
+  .banner {
+    height: 600px;
+  }
+
+  .carousel-indicators {
+    margin-bottom: 5rem;
+  }
+
+  .carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+  .custom-flex-spacing  {
     padding-right: 0;
     padding-left: 60px;
   }
@@ -897,8 +1067,12 @@ footer img {
     min-width: 180px;
   }
 
-   /* Ubication */
-   .days {
+  #pastry-intro {
+    margin-top: 120px;
+  }
+
+  /* Ubication */
+  .days {
     font-size: 5.5rem;
   }
 
@@ -923,9 +1097,35 @@ footer img {
   .padding-grey {
     display: flex;
   }
+  
+  /* Pastry */
+  #pasteles h1, #galletas h1,
+  #tartas h1,
+  #especiales h1,
+  #cupcakes h1,
+  #panques h1 {
+    margin-top: 110px;
+  }
+
+  /* 📌 Contenedor de tarjetas */
+.padding-cards { 
+  margin-bottom: 150px;
+}
 
   /* Nosotros */
   .padding-green {
     display: flex;
+  }
+
+  /* FACTURACIÓN ELECTRÓNICA */
+
+  /* Fondo gris suave y espaciado */
+  .text-invoicing {
+    padding: 140px 40px 60px;
+  }
+  /* Formulario */
+  .form-invoicing form {
+    padding: 50px;
+    margin-top: 100px;
   }
 }

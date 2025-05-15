@@ -20,7 +20,7 @@
       src="https://kit.fontawesome.com/59ccaa4f16.js"
       crossorigin="anonymous"
     ></script>
-    <title>Chuen – Repostería Artesanal Gourmet</title>
+    <title>Chuen - Repostería Artesanal Gourmet</title>
   </head>
 
   <body>
@@ -46,8 +46,9 @@
           <li><a href="./pages/facturacion.html">Facturación</a></li>
           <!-- Barra de búsqueda -->
           <li>
+            <!-- Input de búsqueda -->
             <form class="form-search" action="">
-              <input type="search" placeholder="Buscar" />
+              <input type="search" id="input-busqueda" placeholder="Buscar producto..." />
               <button class="btn-search">
                 <i class="fa-solid fa-magnifying-glass fa-2xs"></i>
               </button>
@@ -199,12 +200,12 @@
       </section>
 
       <section
-        class="d-flex justify-content-center align-items-center text-banner"
+        class="custom-flex-spacing justify-content-center align-items-center text-banner"
       >
         <div class="row w-100">
           <!-- Columna izquierda: Imagen y párrafo -->
           <div
-            class="col-md-6 d-flex flex-column justify-content-center align-items-start quote"
+            class="col-md-6 custom-flex-spacing flex-column justify-content-center align-items-start quote"
           >
             <img
               src="../img/dulces-momentos.png"
@@ -215,14 +216,14 @@
               <strong>Descubre nuestros irresistibles postres gourmet, elaborados con
               amor y los ingredientes más frescos.</strong>
             </p>
-            <button class="btn-banner">
+            <a href="./pages/pastry.html" class="btn-banner">
               <i class="fa fa-eye"></i> Descubre más
-            </button>
+            </a>            
           </div>
 
           <!-- Columna derecha: Botón -->
           <div
-            class="col-md-4 d-flex justify-content-end align-items-center text-center"
+            class="col-md-4 custom-flex-spacing justify-content-end align-items-center text-center"
           >
             <img
               src="../img/chica-repostera.png"
@@ -322,47 +323,61 @@
       </section>
 
       <!-- Sección del feed de Instagram -->
-<section class="instagram-feed padding">
-  <div class="container text-center">
-    <h2 class="mb-4">Síguenos en Instagram</h2>
-    <!-- LightWidget script y iframe -->
-    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-    <iframe src="//lightwidget.com/widgets/475c016e4c945ce882397effbfe84e5a.html"
-            scrolling="no"
-            allowtransparency="true"
-            class="lightwidget-widget"
-            style="width:100%;border:0;overflow:hidden;">
-    </iframe>
-    <!-- <p class="mt-3">
-      <a href="https://www.instagram.com/chuen.creando.sensaciones/" target="_blank" class="custom-link">
-        @chuen.creando.sensaciones
-      </a>
-    </p> -->
-  </div>
-</section>
+      <!-- <section class="instagram-feed py-5">
+        <div class="container text-center">
+          <h2 class="mb-5">Síguenos en Instagram</h2> -->
+          
+          <!-- Alternativa: texto y botón personalizados -->
+          <!-- <p class="mb-4">
+            <a href="https://www.instagram.com/chuen.creando.sensaciones/" class="btn btn-outline-primary" target="_blank">
+              Ver perfil @chuen.creando.sensaciones
+            </a>
+          </p> -->
+      
+          <!-- Solo publicaciones -->
+          <!-- <iframe src="//lightwidget.com/widgets/2bb0f77eb57954fd8639b1ecdad49830.html"
+                  scrolling="no"
+                  allowtransparency="true"
+                  class="lightwidget-widget"
+                  data-header="false"
+                  style="width:100%;border:0;overflow:hidden;">
+          </iframe>
+        </div>
+      </section> -->
+      
     </main>
 
-    <footer>
-      <div class="div-social-media">
-        <img src="./img/hashtag-chuen.png" alt="logotipo marca" />
-        <p class="footer-text">
-          CDMX, Teniente Fausto Vega Santander, Col. Escuadrón 201
+    <footer class="bg-orange-strong text-white text-center py-5">
+      <div class="container">
+        <img src="./img/hashtag-chuen.png" alt="Logotipo Chuen" class="mb-4" style="max-width: 180px;" />
+    
+        <p class="mb-2 fw-semibold">
+          CDMX, Teniente Fausto Vega Santander,<br />
+          Col. Escuadrón 201
         </p>
-        <img class="social-media" src="./img/f.png" alt="logotipo facebook" />
-        <a href="https://www.facebook.com/ChuenCreando/">ChuenCreando</a>
-        <img class="social-media" src="./img/ig.png" alt="logotipo instagram" />
-        <a href="https://www.instagram.com/chuen.creando.sensaciones/"
-          >Chuen.Creando.Sensaciones</a
-        >
+    
+        <p class="mb-4">Síguenos para descubrir sabores que despiertan emociones</p>
+    
+        <div class="d-flex justify-content-center align-items-center flex-wrap gap-2 mb-2">
+          <a href="https://www.facebook.com/ChuenCreando/" class="d-flex align-items-center text-white text-decoration-none" target="_blank">
+            <i class="fab fa-facebook fa-lg me-1"></i> ChuenCreando
+          </a>
+          <span class="text-white-50">|</span>
+          <a href="https://www.instagram.com/chuen.creando.sensaciones/" class="d-flex align-items-center text-white text-decoration-none" target="_blank">
+            <i class="fab fa-instagram fa-lg me-1"></i> @chuen.creando.sensaciones
+          </a>
+        </div>
       </div>
-      <section class="privacy">
-        <p>
-          2024 ® Chuen.com.mx Todos los derechos reservados.
-          <br />
-          Aviso de Privacidad
-        </p>
-      </section>
     </footer>
+    
+    <!-- Aviso de privacidad sin fondo naranja adicional -->
+    <div class="footer-legal-full text-white text-center py-3">
+      <small>
+        2025 ® Chuen.com.mx Todos los derechos reservados.
+        <span class="px-2">|</span>
+        <a href="#" class="text-white text-decoration-underline">Aviso de Privacidad</a>
+      </small>
+    </div>
 
     <!-- Botón flotante de WhatsApp -->
     <a
@@ -372,6 +387,7 @@
       <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script type="module" src="../src/js/search.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
